@@ -639,3 +639,7 @@ struck.pack("<I", address) -> to get addresses in little endian
 ```
 
 FARE SCRIPT PER OFFSET
+
+#GIT
+
+git reset --hard HEAD -> to reset git directory
