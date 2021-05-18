@@ -643,3 +643,4 @@ FARE SCRIPT PER OFFSET
 #GIT
 
 git reset --hard HEAD -> to reset git directory
+git show *HASH*
