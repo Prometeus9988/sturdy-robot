@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  4 DEC 2021 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  5 DEC 2021 10:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -65,26 +65,33 @@ mi anti-debug dell'applicazione
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4] (./homework3.aux) ) 
+[2] [3]
+Overfull \hbox (11.8228pt too wide) in paragraph at lines 64--65
+[]\OT1/cmr/m/n/10 Dai rifer-i-menti del file map-ping ^^Re pos-si-bile trovare 
+la fun-zione (cre-ate[]checksum)
+ []
+
+[4] [5] (./homework3.aux) ) 
 Here is how much of TeX's memory you used:
- 436 strings out of 478994
- 7619 string characters out of 5858183
- 301258 words of memory out of 5000000
- 17989 multiletter control sequences out of 15000+600000
- 407712 words of font info for 41 fonts, out of 8000000 for 9000
+ 440 strings out of 478994
+ 7657 string characters out of 5858183
+ 304258 words of memory out of 5000000
+ 17992 multiletter control sequences out of 15000+600000
+ 407880 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,6n,50p,1541b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dv
-ips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/c
-m-super/sfrm1000.pfb>
-Output written on homework3.pdf (4 pages, 72295 bytes).
+ 44i,6n,50p,2534b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/
+cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1000.pfb>
+Output written on homework3.pdf (5 pages, 93470 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
