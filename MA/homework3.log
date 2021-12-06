@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  5 DEC 2021 16:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  6 DEC 2021 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count179
 \c@section=\count180
@@ -51,52 +51,61 @@ LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 10.
+(Font)              <14.4> on input line 10.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 10.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 10.
+(Font)              <7> on input line 10.
+ [1
 
-Overfull \hbox (25.08392pt too wide) in paragraph at lines 22--23
-\OT1/cmr/m/n/10 Nelle sezioni suc-ces-sive si vanno ad elim-inare i mec-ca-n-is
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (44.8066pt too wide) in paragraph at lines 24--25
+\OT1/cmr/m/n/12 Nelle sezioni suc-ces-sive si vanno ad elim-inare i mec-ca-n-is
 mi anti-debug dell'applicazione
  []
 
-[1
-
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (43.49661pt too wide) in paragraph at lines 54--54
-[]\OT1/cmtt/m/n/10 BYTE                          BeingDebugged; <- Controllato 
+[2]
+Overfull \hbox (66.95023pt too wide) in paragraph at lines 56--56
+[]\OT1/cmtt/m/n/12 BYTE                          BeingDebugged; <- Controllato 
 dalla funzione[] 
  []
 
-[2] [3]
-Overfull \hbox (11.8228pt too wide) in paragraph at lines 66--67
-[]\OT1/cmr/m/n/10 Dai rifer-i-menti del file map-ping ^^Re pos-si-bile trovare 
+[3] [4]
+Overfull \hbox (29.09648pt too wide) in paragraph at lines 68--70
+[]\OT1/cmr/m/n/12 Dai rifer-i-menti del file map-ping ^^Re pos-si-bile trovare 
 la fun-zione (cre-ate[]checksum)
  []
 
-[4] [5] (./homework3.aux) ) 
+
+Overfull \hbox (15.72227pt too wide) in paragraph at lines 68--70
+\OT1/cmr/m/n/12 ogni dword del pro-gramma si ap-plica uno XOR per creare un has
+h dell'eseguibile.
+ []
+
+
+Overfull \hbox (1.20149pt too wide) in paragraph at lines 73--75
+\OT1/cmr/m/n/12 Avendo risolto i mec-ca-n-ismi che im-pe-di-vano l'analisi di-n
+am-ica del pro-gramma
+ []
+
+[5] [6] (./homework3.aux) ) 
 Here is how much of TeX's memory you used:
- 440 strings out of 478994
- 7657 string characters out of 5858183
- 303258 words of memory out of 5000000
- 17992 multiletter control sequences out of 15000+600000
- 407880 words of font info for 42 fonts, out of 8000000 for 9000
+ 427 strings out of 478994
+ 7554 string characters out of 5858183
+ 306279 words of memory out of 5000000
+ 17985 multiletter control sequences out of 15000+600000
+ 406359 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,6n,50p,2609b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,6n,50p,1630b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1000.pfb>
-Output written on homework3.pdf (5 pages, 94632 bytes).
+/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmtt12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-s
+uper/sfrm1200.pfb>
+Output written on homework3.pdf (6 pages, 75864 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 44 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
