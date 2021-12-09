@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  9 DEC 2021 09:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  9 DEC 2021 10:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -75,26 +75,26 @@ nes-tra dell'applicazione
  []
 
 [3] [4]
-Overfull \hbox (29.09648pt too wide) in paragraph at lines 69--72
+Overfull \hbox (19.95769pt too wide) in paragraph at lines 70--73
 []\OT1/cmr/m/n/12 Dai rifer-i-menti del file map-ping ^^Re pos-si-bile trovare 
-la fun-zione (cre-ate[]checksum)
+la fun-zione cre-ate[]checksum
  []
 
-
-Overfull \hbox (1.20149pt too wide) in paragraph at lines 78--80
+[5]
+Overfull \hbox (1.20149pt too wide) in paragraph at lines 79--83
 \OT1/cmr/m/n/12 Avendo risolto i mec-ca-n-ismi che im-pe-di-vano l'analisi di-n
 am-ica del pro-gramma
  []
 
-[5] [6] (./homework3.aux) ) 
+[6] [7] (./homework3.aux) ) 
 Here is how much of TeX's memory you used:
  427 strings out of 478994
  7554 string characters out of 5858183
- 307279 words of memory out of 5000000
+ 303279 words of memory out of 5000000
  17985 multiletter control sequences out of 15000+600000
  406359 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,6n,50p,1739b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,6n,50p,1177b,188s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
@@ -102,10 +102,10 @@ c/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
 msfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-s
 uper/sfrm1200.pfb>
-Output written on homework3.pdf (6 pages, 76633 bytes).
+Output written on homework3.pdf (7 pages, 77597 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 49 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
