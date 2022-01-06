@@ -1,0 +1,25 @@
+\documentclass[]{article}
+
+%opening
+\title{Homework 4}
+\author{Daniele Ferrarelli}
+\date{}
+
+\begin{document}
+
+\maketitle
+\section{Analisi Iniziale}
+\begin{itemize}
+	\item Processor: x86
+	\item Endian: Little Endian
+	\item Format Portaable Executable
+\end{itemize}
+
+
+Si esegue su una macchina virtuale appositamente preparata e scollegata  da internet. Il malware in questione si tratta di un ransomware, poiché andrà a cifrare file della macchina virtuale se eseguito. Successivamente mostrerà una pagina html ed una immagine contenente le istruzioni per ottenere il programma di decodifica. Si può notare che viene generato un ID del sistema corrente da utilizzare per contattare il sito malevolo. Nelle informazioni mostrate dal malware si vede che indica l'utilizzo di RSA-2048 ed AES-128. 
+
+\section{Unpack del Malware}
+Tramite il tool PE Bear si inizia con una analisi del malware e si notano le sezioni UPX0 ed UPX1, questo indica che il malware fa' uso del packer UPX. Si tenta utilizzando l'eseguibile UPX di fare l'unpack del malware e lo si porta su Ghidra per esaminarlo.  Si nota che il file viene decompresso tramite UPX. 
+
+Si inizia l'analisi tramite Ghidra dell'eseguibile originale, tuttavia non si può andare avanti poiché l'eseguibile è stato "packato". Si tenta con l'eseguibile unpacked. Tuttavia l'unpacker di UPX non ha prodotto risultati soddisfacenti poiché l'eseguibile non è stato unpackato sufficientemente.a
+\end{document}
