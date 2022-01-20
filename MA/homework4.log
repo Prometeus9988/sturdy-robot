@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  6 JAN 2022 09:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  20 JAN 2022 15:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -51,29 +51,71 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 10.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 10.
- [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./home
-work4.aux) ) 
+Overfull \hbox (8.85258pt too wide) in paragraph at lines 26--29
+\OT1/cmr/m/n/10 ot-ten-gono risul-tati. Uti-liz-zando un break-point sull'acces
+so in memo-ria all'indirizzo
+ []
+
+[1
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (11.58401pt too wide) in paragraph at lines 39--40
+[]\OT1/cmr/m/n/10 Una volta de-of-fus-cato il mal-ware si nota l'entry point or
+ig-i-nale dell'applicazione,
+ []
+
+[2]
+Overfull \hbox (16.88947pt too wide) in paragraph at lines 42--43
+\OT1/cmr/m/n/10 prima dell'esecuzione del main, questa fun-ziona risulta es-ser
+e in-ter-es-sante nell'analisi
+ []
+
+
+Overfull \hbox (73.93684pt too wide) in paragraph at lines 57--58
+\OT1/cmr/m/n/10 viene fatto uti-liz-zando le flag SEM[]FAILCRITICALERRORS, SEM[
+]NOGPFAULTERRORBOX,
+ []
+
+[3]
+Overfull \hbox (5.90625pt too wide) in paragraph at lines 67--68
+[]\OT1/cmr/m/n/10 Si nota la pre-senza di func-tion pointer as-seg-nati dalla f
+un-zione FUN[]00476b50,
+ []
+
+
+Overfull \hbox (20.62848pt too wide) in paragraph at lines 73--74
+[]\OT1/cmr/m/n/10 Poi si an-dranno a con-frontare due stringhe uti-liz-zando la
+ fun-zione FUN[]0042E4C0
+ []
+
+
+Overfull \hbox (5.25401pt too wide) in paragraph at lines 79--80
+ \OT1/cmr/bx/n/10 FUN[]0041f560[] \OT1/cmr/m/n/10 Suc-ces-si-va-mente si va ad 
+anal-iz-zare la fun-zione FUN[]0041f560,
+ []
+
+[4] [5] (./homework4.aux) ) 
 Here is how much of TeX's memory you used:
- 410 strings out of 478994
- 7139 string characters out of 5858183
- 294826 words of memory out of 5000000
- 17967 multiletter control sequences out of 15000+600000
- 407405 words of font info for 40 fonts, out of 8000000 for 9000
+ 414 strings out of 478994
+ 7193 string characters out of 5858183
+ 298826 words of memory out of 5000000
+ 17970 multiletter control sequences out of 15000+600000
+ 408020 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,6n,50p,555b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-sup
-er-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
-pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pf
-b>
-Output written on homework4.pdf (1 page, 54946 bytes).
+ 44i,6n,50p,1048b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/
+cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1000.pfb>
+Output written on homework4.pdf (5 pages, 87852 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
