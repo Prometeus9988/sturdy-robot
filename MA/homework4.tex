@@ -16,7 +16,7 @@
 \end{itemize}
 
 
-Si esegue su una macchina virtuale appositamente preparata e scollegata  da internet. Il malware in questione è un ransomware, poiché andrà a criptare file della macchina virtuale se eseguito. Successivamente mostrerà una pagina html ed una immagine contenente le istruzioni per ottenere il programma di decodifica. Si può notare che viene generato un ID del sistema corrente da utilizzare per contattare il sito malevolo. Nelle informazioni mostrate dal malware si vede che indica l'utilizzo di RSA-2048 ed AES-128.  Inoltre il malware si cancella una volta terminato il lavoro. Al momento dell'avvio del malware, se non si disattiva Windows Defendere, viene rilevato come il ransomware Locky. Tramite una ricerca su internet è possibile ottenere informazioni utili sul funzionamento del malware. 
+Si esegue su una macchina virtuale appositamente preparata e scollegata  da internet. Il malware in questione è un ransomware, poiché andrà a criptare file della macchina virtuale se eseguito. Successivamente mostrerà una pagina HTML ed una immagine contenente le istruzioni per ottenere il programma di decodifica. Si può notare che viene generato un ID del sistema corrente da utilizzare per contattare il sito malevolo. Nelle informazioni mostrate dal malware si vede che indica l'utilizzo di RSA-2048 ed AES-128.  Inoltre il malware si cancella una volta terminato il lavoro. Al momento dell'avvio del malware, se non si disattiva Windows Defendere, viene rilevato come il ransomware Locky. Tramite una ricerca su internet è possibile ottenere informazioni utili sul funzionamento del malware. 
 
 \section{Unpack del Malware}
 Tramite il tool PE Bear si inizia con una analisi del malware e si notano le sezioni UPX0 ed UPX1, questo indica che il malware fa' uso del packer UPX. Si tenta, utilizzando l'eseguibile UPX, di fare l'unpack del malware tuttavia la decompressione non ha avuto successo, questo può indicare l'utilizzo di modalità di packing diverse da quelle originali di UPX.
@@ -42,9 +42,15 @@ Una volta deoffuscato il malware si nota l'entry point originale dell'applicazio
 All'interno del mainWrapper si nota la chiamata della funzione 0x00477050 prima dell'esecuzione del main, questa funziona risulta essere interessante nell'analisi del malware poiché dopo aver iniziato ad analizzarlo, si è notata la presenza di un area di memoria utilizzata dalla funzione main. Questa area di memoria viene allocata proprio da questa funzione, per questo motivo viene rinominata a prepareMemoryArea e si passa ad analizzarla. Dopo aver chiamato la funzione memoryWrapper verrà chiamato il main effettivo del malware.
 
 \subsubsection{PrepareMemoryArea}
-All'interno di questa funzione verrà 
+All'interno di questa funzione verrà allocata una porzione di memoria utilizzata poi dalla funzione main. Inoltre viene fatto un controllo sulla PEB per controllare la presenza di un debugger in esecuzione. Questo controllo viene eseguito accedendo, tramite il segmento FS, alla flag BeingDebugged presente nella PEB. Se il malware esegue sotto debugger verranno utilizzate le chiamate ad GetModuleHandle e GetProcAddress per ottenere il riferimento all'API della DLL kernel32 AllocConsole, che viene copiato nella zona di memoria precedentemente allocata. 
+
+Se non è presente il debugger in questa zona verranno inseriti dei byte di controllo ed una serie 0. Controllando il contenuto del resto dell'area di memoria, si può notare una serie di byte che corrispondono al linguaggio HTML, questo può indicare che verranno utilizzati per creare la pagina HTML mostrata quando il computer viene infettato. Viene inoltre trovata una sequenza di byte che potrebbe essere utilizzata per creare la bitmap mostrata insieme alla pagina HTML. All'interno è presente anche il testo mostrato all'utente, contenente le istruzioni per decriptare i file nel sistema. Si può notare l'ID placeholder che verrà sostituito con un ID generato dal malware per identificare la macchina infetta. 
+In questa zona di memoria andranno ad essere inserite informazioni necessarie anche per successive funzioni del malware, un esempio può essere l'indirizzo ip con cui il malware comunicherà o la pagina htm da utilizzare. 
+
+Successivamente si passa all'analisi della funzione main del malware.
 
 \subsection{Main}
+
 
 Si inizia l'analisi del malware vero e proprio e si vede una funzione simile ad un entry point classico. Si cerca il main, vedendo la struttura delle istruzioni si può supporre che la funzione 0x00429ea0 sia il main. 
 Mentre si analizza si nota la presenza di un grande numero di jump e NOP all'interno dell'applicazione per complicare il flusso delle istruzioni.
@@ -61,7 +67,7 @@ Successivamente si passa alla funzione FUN\_0042CF00 (lookupVirtualizationEnbale
 All'interno del main poi viene fatta la chiamata a GetSystemDefaultLangID, GetUserDefaultLangID e GetUserDefaultUILanguage per ottenere il linguaggio di defult del sistema, dell'utente e dell'UI. Successivamente tramite debugger si vede che si va in sleep, questo può indicare la presenza di misure anti-debug. 
 
 \subsection{Ricerca meccanismi anti analisi}
-Questa misura consiste nel andare in sleep se un determinato dato in memoria è diverso da 0, utilizzando il debugger si può vedere che questa zona di memoria fa parte delle zone allocate in precedenza, quindi al loro interno si potrebbe usare qualche meccanismo anti -debug. In questo indirizzo di memoria vengono copiato CCCCCCCC, che viene controllato e porta il sleep il malware.  Zona di memoria allocata separatamente. Questa zona di memoria viene preparata dalla funzione FUN\_0042c820 (mainWrapper)che è un wrapper della funzione main, chiamato dalla funzione entryFromDeobfs.  Questo wrapper si occuperà di chiamare funzioni che deallocano le aree di memoria utilizzate per mutare il malware. Poi allocherà una nuova zona di memoria. Si nota l'accesso alla struttura TEB ad offset FS:[0x18], per poi accedere la PEB e controllare il byte BeingDebugged. Se durante l'analisi si andrà a cambiare il risultato del registro è possibile continuare con l'analisi dinamica, senza che il programma termini.
+Questa misura consiste nel andare in sleep (12 s senza debugger, valore diverso con debugger, viene creato eseguibile con sleep a 0) se un determinato dato in memoria è diverso da 0, utilizzando il debugger si può vedere che questa zona di memoria fa parte delle zone allocate in precedenza, quindi al loro interno si potrebbe usare qualche meccanismo anti -debug. In questo indirizzo di memoria vengono copiato CCCCCCCC, che viene controllato e porta il sleep il malware.  Zona di memoria allocata separatamente. Questa zona di memoria viene preparata dalla funzione FUN\_0042c820 (mainWrapper)che è un wrapper della funzione main, chiamato dalla funzione entryFromDeobfs.  Questo wrapper si occuperà di chiamare funzioni che deallocano le aree di memoria utilizzate per mutare il malware. Poi allocherà una nuova zona di memoria. Si nota l'accesso alla struttura TEB ad offset FS:[0x18], per poi accedere la PEB e controllare il byte BeingDebugged. Se durante l'analisi si andrà a cambiare il risultato del registro è possibile continuare con l'analisi dinamica, senza che il programma termini.
 
 
 Si nota la presenza di function pointer assegnati dalla funzione FUN\_00476b50, si va ad analizzare questa funzione con il debugger per capire che api vengono usate. 
@@ -78,9 +84,6 @@ Tramite un regshot è possibile confrontare le chiavi del sistema, essendo prese
 \paragraph{FUN\_0041f560}
 Successivamente si va ad analizzare la funzione FUN\_0041f560, in questa funzione si utilizzerà GetTempPath per ottenere la directory contenente i file temporanei. 
 
-\paragraph{Analisi thread}
-Continuando l'analisi si nota la presenza all'interno della funzione main di uno spawn di un thread, questo thread andrà ad eseguire subito dopo la creazione nella funzione threadFunction (FUN\_00429b40).  In questa funzione si andranno a modificare le priorità del thread corrente utilizzando le chiamate a GetCurrentThread e SetThreadPriority, viene impostata una bassa priorità. Successivamente si possono notare chiamate a funzioni che preparano aree di memoria e utilizzano operazioni su file come FindFirstFileW.
-
 \paragraph{Grr}
 All'interno delle funzioni utilizzate si possono notare riferimenti simili ad una programmazione ad oggetti. Ghidra riconosce molte delle funzioni associate ad una determinata struttura, questo perché è presente il parametro this in molte delle funzioni analizzate. 
 
@@ -93,5 +96,45 @@ Se è debuggato forse parte su svchost, lo fa partire da C:\\Windows\\User\\AppD
 
 Usa chiavi di registri per cambiare il wallpaper all'interno di launch something. 
 
+Si controlla il traffico utilizzando Wireshark. Si notano query DNS a WPAD (Web Proxy Auto-Discovery) ma dovrebbe essere proxy di Windows. Inoltre DNS a sb.scorecardresearch.com, img-s-msn-com.akamized.net, api.msn.com, c.msn.com, c.bing.com, assets.msn.com (credo siano tracker). Si nota trasmissione di dati con un indirizzo 204.79.197.219 probabilmente per ottenere la chiave di cifratura per il malware. 
+
 securelist.it - locky
+
+
+
+\subsection{Analisi thread swap}
+In questa funzione si andrà a risolvere il path di ntdll.dll che nel caso della macchina virtuale si trova in C:WindowsSYSTEM32ntdll.dll. Questa dll verrà aperta tramite CreateFileA con flag di GENERIC\_READ, FILE\_SHARE\_READ ed OPEN\_EXISTING. Successivamente verrà chiamata la funzione 0x004749C0 rinominata a getSystemInformations, questo poiché farà uso delle chiamata alla dll NtQuerySystemInformations con class 0x10 (SYSTEM\_HANDLE\_INFORMATIONS). Questa chiamata produrrà una struttura dati contente le handle del sistema all'interno della struttura dati.
+\begin{verbatim}
+	struct SYSTEM_HANDLE_INFORMATION {
+		ULONG NumberOfHandles;
+		SYSTEM_HANDLE_TABLE_ENTRY_INFO Handles [ANYSIZE_ARRAY];
+	}
+\end{verbatim}
+
+Le entry presenti nell'array sono del tipo SYSTEM\_HANDLE\_TABLE\_ENTRY\_INFO. Questa struttura contiene informazioni sulle handle, come per esempio UniqueProcessorId, HandleAttributes, HandleValue. Queste strutture non sono documentate da Windows, quindi alcuni campi non sono conosciuti. 
+
+Successivamente la funzione andrà a prendere l'ID attuale del processo, per poi utilizzare la funzione 0x00474C30 rinominata openAndSwap, in cui utilizza OpenProcess, GetCurrentProcess e NtDuplicateObject (funzione non documentata) fa in modo che questi handle puntino al malware. 
+
+Successivamente chiamerà la funzione 0x004750E0 rinominata a createQueryThread per ogni handle, in questa funzione si andrà a spawnare un thread che eseguirà NtQueryObject per poi sincronizzarsi con il  chiamante e venir terminato.
+
+\paragraph{Analisi thread di cifratura}
+Continuando l'analisi si nota la presenza all'interno della funzione main di uno spawn di un thread, questo thread andrà ad eseguire subito dopo la creazione nella funzione threadFunction (FUN\_00429b40).  In questa funzione si andranno a modificare le priorità del thread corrente utilizzando le chiamate a GetCurrentThread e SetThreadPriority, viene impostata una bassa priorità (THREAD\_PRIORITY\_LOWEST).
+
+Sucessivamente si andrà a chiamare la funzione 
+PREPARA WHITE LIST di direcotry e file e si preleva tutte le classi, poi chiama quella che cripta. In prepareCSP si andrà a prendere una chiave RSA che veniva mantenuta nella memoria allocata all'inizio dell'esecuzione del malware, chiave RSA1 (probabilemte pubblica usata per criptare la chiave vera). Vengono usate funzioni criptografiche che generano dati casuali per il nome del nuovo file. Usa la chiave RSA1. 
+
+\subparagraph{encryptFile}
+Possono essere usate anche le istruzioni AESENC con accellerazione, tuttavia queste istruzioni non vengono riconosciute da OllyDBG. Questa funzione encryptWithAESENC andrà a criptare i dati presi dal file. Inoltre imposterà la data di creazione del file al tempo corrente.
+
+Forse il malware ha disattivato la comunicazione con internet, questo perché la funzione che cripta non andrà a comunicare con internet(??????).
+
+\subsection{Comunicazione con Internet}
+Comunicazione disattivata, si vede un URL non completo. I Thread che criptano probabilemente mandano informazioni alla centrale di controllo.
+
+\subsection{CoFunctions}
+
+
+\subsection{}
+Vengono create 1 asasin per cartella, il main thread lo crea nel desktop
+
 \end{document}

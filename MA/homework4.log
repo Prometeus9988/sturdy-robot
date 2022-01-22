@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  20 JAN 2022 15:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  21 JAN 2022 17:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -71,51 +71,76 @@ Overfull \hbox (16.88947pt too wide) in paragraph at lines 42--43
 e in-ter-es-sante nell'analisi
  []
 
-
-Overfull \hbox (73.93684pt too wide) in paragraph at lines 57--58
+[3]
+Overfull \hbox (73.93684pt too wide) in paragraph at lines 62--63
 \OT1/cmr/m/n/10 viene fatto uti-liz-zando le flag SEM[]FAILCRITICALERRORS, SEM[
 ]NOGPFAULTERRORBOX,
  []
 
-[3]
-Overfull \hbox (5.90625pt too wide) in paragraph at lines 67--68
+[4]
+Overfull \hbox (5.90625pt too wide) in paragraph at lines 72--73
 []\OT1/cmr/m/n/10 Si nota la pre-senza di func-tion pointer as-seg-nati dalla f
 un-zione FUN[]00476b50,
  []
 
 
-Overfull \hbox (20.62848pt too wide) in paragraph at lines 73--74
+Overfull \hbox (20.62848pt too wide) in paragraph at lines 78--79
 []\OT1/cmr/m/n/10 Poi si an-dranno a con-frontare due stringhe uti-liz-zando la
  fun-zione FUN[]0042E4C0
  []
 
 
-Overfull \hbox (5.25401pt too wide) in paragraph at lines 79--80
+Overfull \hbox (5.25401pt too wide) in paragraph at lines 84--85
  \OT1/cmr/bx/n/10 FUN[]0041f560[] \OT1/cmr/m/n/10 Suc-ces-si-va-mente si va ad 
 anal-iz-zare la fun-zione FUN[]0041f560,
  []
 
-[4] [5] (./homework4.aux) ) 
+[5]
+Overfull \hbox (40.81192pt too wide) in paragraph at lines 105--106
+\OT1/cmr/m/n/10 dll Nt-QuerySys-tem-In-for-ma-tions con class 0x10 (SYS-TEM[]HA
+NDLE[]INFORMATIONS).
+ []
+
+
+Overfull \hbox (41.15067pt too wide) in paragraph at lines 113--114
+[]\OT1/cmr/m/n/10 Le en-try pre-senti nell'array sono del tipo SYS-TEM[]HANDLE[
+]TABLE[]ENTRY[]INFO.
+ []
+
+
+Overfull \hbox (1.47287pt too wide) in paragraph at lines 117--118
+[]\OT1/cmr/m/n/10 Successivamente chi-amer^^Ra la fun-zione 0x004750E0 ri-nom-i
+-nata a cre-ate-Query-
+ []
+
+
+Overfull \hbox (11.50108pt too wide) in paragraph at lines 120--121
+ \OT1/cmr/bx/n/10 Anal-isi thread di cifratura[] \OT1/cmr/m/n/10 Con-tin-uando 
+l'analisi si nota la pre-senza all'interno
+ []
+
+[6] [7] (./homework4.aux) ) 
 Here is how much of TeX's memory you used:
- 414 strings out of 478994
- 7193 string characters out of 5858183
+ 417 strings out of 478994
+ 7223 string characters out of 5858183
  298826 words of memory out of 5000000
- 17970 multiletter control sequences out of 15000+600000
- 408020 words of font info for 42 fonts, out of 8000000 for 9000
+ 17972 multiletter control sequences out of 15000+600000
+ 408188 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,6n,50p,1048b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,6n,50p,1138b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1000.pfb>
-Output written on homework4.pdf (5 pages, 87852 bytes).
+onts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmtt10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-supe
+r/sfrm1000.pfb>
+Output written on homework4.pdf (7 pages, 107789 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
