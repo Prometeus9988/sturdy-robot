@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  24 JAN 2022 16:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  25 JAN 2022 12:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count179
 \c@section=\count180
@@ -237,136 +237,173 @@ LaTeX Info: Redefining \nameref on input line 18.
 \openout3 = `homework4.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 21.
+(Font)              <14.4> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 21.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 21.
+(Font)              <7> on input line 21.
  (./homework4.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
+(Font)              <12> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 4.
 )
 \tf@toc=\write4
 \openout4 = `homework4.toc'.
 
  [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (8.85258pt too wide) in paragraph at lines 37--40
-\OT1/cmr/m/n/10 ot-ten-gono risul-tati. Uti-liz-zando un break-point sull'acces
-so in memo-ria all'indirizzo
- []
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
 
-[2]
-Overfull \hbox (11.58401pt too wide) in paragraph at lines 50--51
-[]\OT1/cmr/m/n/10 Una volta de-of-fus-cato il mal-ware si nota l'entry point or
+Overfull \hbox (28.87898pt too wide) in paragraph at lines 50--51
+[]\OT1/cmr/m/n/12 Una volta de-of-fus-cato il mal-ware si nota l'entry point or
 ig-i-nale dell'applicazione,
  []
 
-[3]
-Overfull \hbox (16.88947pt too wide) in paragraph at lines 53--54
-\OT1/cmr/m/n/10 prima dell'esecuzione del main, questa fun-ziona risulta es-ser
-e in-ter-es-sante nell'analisi
- []
-
-
-Overfull \hbox (23.00069pt too wide) in paragraph at lines 61--63
-[]\OT1/cmr/m/n/10 Per fa-cil-itare l'analisi si ^^Re dis-at-ti-vata la misura a
-nti-debug mod-i-f-i-cando l'eseguibile,
- []
-
-
-Overfull \hbox (24.0841pt too wide) in paragraph at lines 65--66
-\OT1/cmr/m/n/10 Iniziando l'analisi della fun-zione main si nota la pre-senza d
-i una fun-zione (0x00401018)
- []
-
 [4]
-Overfull \hbox (73.93684pt too wide) in paragraph at lines 69--70
-\OT1/cmr/m/n/10 viene fatto uti-liz-zando le flag SEM[]FAILCRITICALERRORS, SEM[
+Overfull \hbox (4.36536pt too wide) in paragraph at lines 69--70
+[]\OT1/cmr/m/n/12 Successivamente si nota la pre-senza della chia-mata a SetEr-
+ror-Mode, questo
+ []
+
+
+Overfull \hbox (102.1606pt too wide) in paragraph at lines 69--70
+\OT1/cmr/m/n/12 viene fatto uti-liz-zando le flag SEM[]FAILCRITICALERRORS, SEM[
 ]NOGPFAULTERRORBOX, 
  []
 
-[5] [6]
+[5] [6] [7]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
 02.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
- [7]
-Overfull \hbox (106.17221pt too wide) in paragraph at lines 110--112
-\OT1/cmr/m/n/10 tion. Si nota an-che la pre-senza della stringa of-fus-cata "YB
--N-DRFG8EJKMCPQX0T1UWISZA345H769".
- []
 
-[8]
-Overfull \hbox (0.74138pt too wide) in paragraph at lines 119--120
-\OT1/cmr/m/n/10 questa fun-zione si nota come venga prodotta una stringa con-te
--nente "c:". Questa
+Overfull \hbox (0.15706pt too wide) in paragraph at lines 102--103
+\OT1/cmr/m/n/12 All'interno di questa fun-zione verr^^Ra gen-er-ato l'hash che 
+iden-ti-fica la macchina,
  []
 
 
-Overfull \hbox (5.5452pt too wide) in paragraph at lines 129--130
-\OT1/cmr/m/n/10 fun-zione verr^^Ra chia-mata la fun-zione FUN[]004749C0 (ri-nom
--i-nata a get-Sys-temHan-
+Overfull \hbox (2.60014pt too wide) in paragraph at lines 102--103
+\OT1/cmr/m/n/12 zione GetVol-u-me-Name-For-Vol-umeM-o-unt-PointA. Una volta pre
+l-e-vato il GUID,
  []
 
-[9]
-Overfull \hbox (41.15067pt too wide) in paragraph at lines 137--138
-[]\OT1/cmr/m/n/10 Le en-try pre-senti nell'array sono del tipo SYS-TEM[]HANDLE[
+
+Overfull \hbox (44.59727pt too wide) in paragraph at lines 102--103
+\OT1/cmr/m/n/12 si pre-parer^^Ra una CSP (cryp-to-graphic ser-vice provider), c
+on tipolo-gia PROV[]RSA[]AES
+ []
+
+
+Overfull \hbox (16.85774pt too wide) in paragraph at lines 102--103
+\OT1/cmr/m/n/12 hash con la fun-zione CryptCre-ate-Hash, questa uti-lizzer^^Ra 
+l'algoritmo CALG[]MD5
+ []
+
+[8] [9]
+Overfull \hbox (0.95714pt too wide) in paragraph at lines 116--117
+\OT1/cmr/m/n/12 Nel caso com sAaaaaaAAAAaaaaAAAAAAAS-D-FGHJKJHGFDSA. Test con
+ []
+
+
+Overfull \hbox (11.62029pt too wide) in paragraph at lines 121--122
+\OT1/cmr/m/n/12 net si andr^^Ra ad es-eguire la fun-zione FUN[]0046C640 (ri-nom
+-i-nata a getAllDrives).
+ []
+
+[10]
+Overfull \hbox (80.62877pt too wide) in paragraph at lines 131--132
+\OT1/cmr/m/n/12 parametro la chia-mata andr^^Ra a pro-durre la strut-tura SYS-T
+EM[]HANDLE[]INFORMATIONS.
+ []
+
+
+Overfull \hbox (63.52647pt too wide) in paragraph at lines 139--140
+[]\OT1/cmr/m/n/12 Le en-try pre-senti nell'array sono del tipo SYS-TEM[]HANDLE[
 ]TABLE[]ENTRY[]INFO.
  []
 
 
-Overfull \hbox (18.14507pt too wide) in paragraph at lines 139--140
-\OT1/cmr/m/n/10 lizzer-anno le chia-mate ad Open-Pro-cess, con per-me-sso di PR
-O-CESS[]DUP[]HANDLE,
+Overfull \hbox (5.77089pt too wide) in paragraph at lines 139--140
+\OT1/cmr/m/n/12 Questa strut-tura con-tiene in-for-mazioni sulle han-dle, come 
+per es-em-pio Unique-
  []
 
-[10]
-Overfull \hbox (133.86194pt too wide) in paragraph at lines 164--165
-[]\OT1/cmr/m/n/10 Se ^^Re de-bug-gato forse parte su sv-chost, lo fa par-tire d
-a C:\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 Windows\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 
-User\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 AppData\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 
-Local\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 Temp\OMS/cmsy/m/n/10 n\OT1/cmr/m/n/10 sv
+
+Overfull \hbox (3.75528pt too wide) in paragraph at lines 141--142
+\OT1/cmr/m/n/12 non doc-u-men-tata, tut-tavia viene chia-mata dall'API Du-pli-c
+ate-Han-dle). Quello
+ []
+
+[11]
+Overfull \hbox (34.26265pt too wide) in paragraph at lines 149--150
+\OT1/cmr/m/n/12 uti-liz-zare molte risorse. Suc-ces-si-va-mente viene chia-mata
+ la fun-zione FUN[]0046BF70
+ []
+
+[12] [13]
+Overfull \hbox (173.22658pt too wide) in paragraph at lines 179--180
+[]\OT1/cmr/m/n/12 Se ^^Re de-bug-gato forse parte su sv-chost, lo fa par-tire d
+a C:\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Windows\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 
+User\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 AppData\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 
+Local\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Temp\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 sv
 chost.exe
  []
 
 
-Overfull \hbox (11.50108pt too wide) in paragraph at lines 174--175
- []\OT1/cmr/bx/n/10 Analisi thread di cifratura[] \OT1/cmr/m/n/10 Con-tin-uando
- l'analisi si nota la pre-senza all'interno
+Overfull \hbox (36.99844pt too wide) in paragraph at lines 183--184
+\OT1/cmr/m/n/12 In-oltre DNS a sb.scorecardresearch.com, img-s-msn-com.akamized
+.net, api.msn.com,
  []
 
-[11] [12] (./homework4.aux)
-Package rerunfilecheck Info: File `homework4.out' has not changed.
-(rerunfilecheck)             Checksum: 054FFDADC9AF864CC4435DFF10818ECC;3889.
+
+Overfull \hbox (1.94547pt too wide) in paragraph at lines 183--184
+\OT1/cmr/m/n/12 c.msn.com, c.bing.com, as-sets.msn.com (credo siano tracker). S
+i nota trasmis-
+ []
+
+[14] [15] (./homework4.aux)
+
+Package rerunfilecheck Warning: File `homework4.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `homework4.out':
+(rerunfilecheck)             Before: 1E5EE0FE29C0DD7BD8296641CF9F1005;4307
+(rerunfilecheck)             After:  6C548C21E6B581E70A02C621B7D2BA65;3950.
  ) 
 Here is how much of TeX's memory you used:
- 7586 strings out of 478994
- 112723 string characters out of 5858183
- 413018 words of memory out of 5000000
- 24960 multiletter control sequences out of 15000+600000
- 408188 words of font info for 43 fonts, out of 8000000 for 9000
+ 7594 strings out of 478994
+ 112870 string characters out of 5858183
+ 413158 words of memory out of 5000000
+ 24964 multiletter control sequences out of 15000+600000
+ 409104 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,74p,1492b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loc
-al/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on homework4.pdf (12 pages, 136199 bytes).
+ 71i,6n,74p,1492b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsection.5.8} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.7} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.6} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/lo
+cal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on homework4.pdf (15 pages, 108885 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 219 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 260 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 

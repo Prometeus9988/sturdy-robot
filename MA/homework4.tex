@@ -1,4 +1,4 @@
-\documentclass[]{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage{hyperref}
 \hypersetup{
 	colorlinks=true,
@@ -115,6 +115,8 @@ Infine si eseguiranno una serie di funzioni per impostare classi usate successiv
 \subsection{Comunicazione internet attiva}
 Nel caso com sAaaaaaAAAAaaaaAAAAAAASDFGHJKJHGFDSA. Test con Wireshark ed indirizzo http trovato.
 
+\subsubsection{gatherDataAndSend}
+
 \subsection{Zona comune}
 Dopo aver eseguito la zona di codice relativa alle azioni fatte con o senza internet si andrà ad eseguire la funzione FUN\_0046C640 (rinominata a getAllDrives). In questa funzione si nota la presenza delle chiamate GetLogicalDrives, GetDriveType, GetDiskFreeSpaceExW e GetVolumeInformationW. Alcune di queste funzioni vengono eseguite all'interno di un ciclo, questo fa pensare che si stanno raccogliendo delle informazioni sui drive della macchina virtuale. Eseguendo questa funzione si nota come venga prodotta una stringa contenente "c:". Questa stringa può indicare il drive principale di WIndows, quindi si suppone che questa funzione vada a cercare i drive della macchina virtuale corrente, per questo viene rinominata a getAllDrives.
 
@@ -138,23 +140,36 @@ Le entry presenti nell'array sono del tipo SYSTEM\_HANDLE\_TABLE\_ENTRY\_INFO. Q
 
 Successivamente la funzione andrà a prendere l'ID attuale del processo, per poi utilizzare la funzione FUN\_00474C30 rinominata openAndSwap, per ogni handle contenuta nella struttura precedente. All'interno della funzione si utilizzeranno le chiamate ad OpenProcess, con permesso di PROCESS\_DUP\_HANDLE, GetCurrentProcess e NtDuplicateObject (funzione non documentata, tuttavia viene chiamata dall'API DuplicateHandle). Quello che andrà a fare il thread è duplicare il riferimento delle handle presenti nel sistema all'interno di questo processo. La chiamata NtDuplicateObject permettere di duplicare un handle di un determinato processo in modo da poterla utilizzare anche nel processo target. In questo caso verranno aperti i riferimenti ai processi che hanno le handle per poi duplicare i riferimenti anche con il processo corrente.  Poi verrà fatto partire un altro thread che utilizzerà NtQueryObject per ottenere il nome dei file che hanno come riferimento le varie handle, una volta che questo thread ha completato la sua ricerca viene terminato.
 
-Successivamente fuori da questa funzione verrà controllato che per ogni file aperto con una handle appartenga alla whitelist. Per fare ciò vengono utilizzate le funzioni che verrano analizzate successivamente whiteListDirectory e whitelist. Se ci sarà un math all'interno di queste liste si andrà ad eseguire nuovamente la funzione openAndSwap. Questa volta si passerà il parametro DUPLICATE\_CLOSE\_SOURCE in modo da chiudere le handle. Questo viene fatto poiché lasciare handle aperte da altri processi potrebbe portare a qualche problema nel momento in cui i file verranno criptati e rinominati.
+Successivamente fuori da questa funzione verrà controllato che per ogni file aperto con una handle appartenga alla whitelist. Per fare ciò vengono utilizzate le funzioni che verrano analizzate successivamente blackListDirectory e whitelist. Se ci sarà un math all'interno di queste liste si andrà ad eseguire nuovamente la funzione openAndSwap. Questa volta si passerà il parametro DUPLICATE\_CLOSE\_SOURCE in modo da chiudere le handle. Questo viene fatto poiché lasciare handle aperte da altri processi potrebbe portare a qualche problema nel momento in cui i file verranno criptati e rinominati.
 
 \subsubsection{Creazione thread }
-For per creare i thread
+Successivamente all'interno del main ci sarà una nuova chiamata a CreateThread, questa chiamata si trova all'interno di un ciclo for. Si suppone che venga creato un thread per ogni drive nel sistema. Si passa ad analizzare la funzione FUN\_00429DF2 che viene eseguita dal thread (threadMalwareCrypt). Si passa ad analizzare questa funzione.
 
 \paragraph{Analisi threadMalwareCrypt}
+All'interno di questa funzione si notano chiamate a SetThreadPriority e GetCurrentThread, queste vengono fatte poiché viene impostata la priorità del thread nella sua esecuzione. All'inizio questa priorità viene impostata a THREAD\_PRIORITY\_LOWEST. Viene controllato un determinato dato non riconosciuto da Ghidra, se si superà il controllo verrà impostata la modalità THREAD\_BACKGROUND. Questo può essere utile per nascondere l'esecuzione del malware visto che potrebbe utilizzare molte risorse. Successivamente viene chiamata la funzione FUN\_0046BF70 (rinominata a findFilesAndCreateClasses), si passa ad analizzare questa funzione.
 
 \subparagraph{Ricerca dei file}
+Si inizia l'analisi della funzione findFilesAndCreateClasses, si nota al suo interno diverse chiamate ad altre funzioni. Tuttavia andandole ad analizzare solamente la funzione FUN\_0046B310 (rinominata a findFiles) risulta essere interessante poiché sono presenti al suo interno diverse chiamate a funzioni di DLL, mentre le altre funzioni sembrano essere di gestione di classi C++ quindi non vengono analizzate. Si passa ad analizzare la funzione findFiles.
+
+All'interno di questa funzione si notano molte chiamate a funzioni di ricerca di file, come per esempio FindFirstFileW e FindNextFileW. Tramite FindFirstFileW è possibile enumerare i vari file all'interno del sistema, viene passato come punto di inizio il drive iniziale e si andrà ad enumerare i vari file. Verranno controllati i permessi tramite la funzione FUN\_00462B10 (checkPermission). Questa tulizzerà che utilizza GetFileSecurityW e AccessCheck per controllare che si abbiano i permessi di accesso ai vari file enumerati. Successivamente si entrerà in un ciclo while in cui si utilizzerà la funzione FindNextFileW per avanzare con l'enumerazione. All'interno di questo ciclo si eseguiranno le funzioni FUN\_0043C160 e FUN\_0043EAD0. Una volta eseguita la prima si nota la presenza sullo stack di una serie di nomi di cartelle di sistema di windows (come per esempio Windows, BOot, System Volume Information,....), questo può indicare una black list di cartelle da non prendere in considerazione per avere il loro contenuto criptato, per questo questa funzione viene rinominata a blackListDirectory. Oltre a cartelle si nota la presenza anche di 3 file all'interno di questa lista. Questi file sono \_Locky\_recover\_instructions.txt, \_Locky\_recover\_instructions.bmp e \_HELP\_instructions.txt, questo fa' pensare che non sia solamente una blacklist di directory ma anche di file.
+
+ Successivamente con la chiamata FUN\_0043EAD0 si notano sullo stack una serie di estensioni di file, questa potrebbe essere la whitelist delle estensioni di file da dover criptare, per questo motivo viene rinominata a whitelist. Si nota la presenza dell'estensione .txt, per questo si prova a far partire il malware e si controlla se un file .txt appositamente creato viene criptato. Una volta eseguito si nota che questo file creato viene criptato, mentre altri file con estensioni .exe non vengono modificati, questo fa' pensare che la funzione appena trovata sia effettivamente la funzione che genera la whitelist. 
+
+Per ogni file trovato si verifica che non si corrisponda ad uno degli elementi della blacklist, e che abbia una estensione nella whitelist, se sì verranno eseguite una serie di funzioni che sembrano allocare memoria, questo può significare che viene allocata una classe ed aggiunta in qualche struttura dati. 
 
 \subparagraph{Funzione di criptaggio}
+Dopo la ricerca dei file viene chiamata la funzione FUN\_00427AC0, questa funzione viene rinominata a cryptFiles. Al suo interno verrà chiamata la funzione FUN\_0041A310 (rinominata a prepareCSP). Quest'ultima andrà a preparare il CSP e importerà la chiave mantenuta all'interno della memoria preparata all'inizio dell'esecuzione, questo viene fatto perché successivamente verrà usato questo CSP per generare parte del nome del nuovo file una volta criptato.
 
+Successivamente si entra in un ciclo for, questo ciclo for probabilmente eseguirà una volta per ogni file da criptare. Al suo interno si trova la funzione FUN\_00413BE0, rinominata a encryptFile. Poi si nota la presenza di un IF con una chiamata alla funzione FUN\_0042E7D0. Quest'ultima avrà al suo interno la creazione di un file tramite la chiamata CreateFileW e la scrittura di un contenuto al suo interno tramite WriteFile. Prima della chiamata si trova l'estensione .htm che corrisponde ad uno dei file creati dal malware una volta terminato l'attacco. Questo può indicare che in questa zona viene creato il file .htm da mostrare all'utente. Si nota, tramite l'esecuzione del malware, che all'interno delle cartelle viene creato un nuovo file asasin.htm, questo fa' pensare che in questa zona viene creato questo file per le varie cartelle presenti nel sistema. (DA RISCRIVERE)
+
+Si passa ad analizzare la funzione encryptFile. 
 \subparagraph{Connessione ad internet attiva}
 
 \subsubsection{Richieste RPC}
 
 \subsubsection{Scrittura su chiavi di registro}
 
+\subsubsection{Creazione immagini e cambio wallpaper}
 
 
 
@@ -180,16 +195,6 @@ PREPARA WHITE LIST di direcotry e file e si preleva tutte le classi, poi chiama 
 Possono essere usate anche le istruzioni AESENC con accellerazione, tuttavia queste istruzioni non vengono riconosciute da OllyDBG. Questa funzione encryptWithAESENC andrà a criptare i dati presi dal file. Inoltre imposterà la data di creazione del file al tempo corrente.
 
 Forse il malware ha disattivato la comunicazione con internet, questo perché la funzione che cripta non andrà a comunicare con internet(??????).
-
-\subsection{Comunicazione con Internet}
-Comunicazione disattivata, si vede un URL non completo. I Thread che criptano probabilemente mandano informazioni alla centrale di controllo.
-
-\subsection{CoFunctions}
-
-
-\subsection{}
-Vengono create 1 asasin per cartella, il main thread lo crea nel desktop
-
 \section{Riassunto}
 
 \end{document}
