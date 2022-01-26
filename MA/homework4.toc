@@ -26,5 +26,5 @@
 \contentsline {subparagraph}{Connessione ad internet attiva}{16}{section*.6}%
 \contentsline {subsubsection}{\numberline {5.5.3}Richieste IPC}{16}{subsubsection.5.5.3}%
 \contentsline {subsubsection}{\numberline {5.5.4}Persistenza del malware}{17}{subsubsection.5.5.4}%
-\contentsline {subsubsection}{\numberline {5.5.5}Creazione immagini e cambio wallpaper}{17}{subsubsection.5.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.5}Creazione immagini e cambio wallpaper}{18}{subsubsection.5.5.5}%
 \contentsline {section}{\numberline {6}Riassunto}{18}{section.6}%
