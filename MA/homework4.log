@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  25 JAN 2022 12:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  26 JAN 2022 16:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -305,105 +305,113 @@ l'algoritmo CALG[]MD5
  []
 
 [8] [9]
-Overfull \hbox (0.95714pt too wide) in paragraph at lines 116--117
-\OT1/cmr/m/n/12 Nel caso com sAaaaaaAAAAaaaaAAAAAAAS-D-FGHJKJHGFDSA. Test con
+Overfull \hbox (51.97368pt too wide) in paragraph at lines 132--135
+\OT1/cmr/m/n/12 AES-ENC trovata suc-ces-si-va-mente. Si no-tano all'interno del
+la fun-zione FUN[]00436CB0,
  []
 
 
-Overfull \hbox (11.62029pt too wide) in paragraph at lines 121--122
+Overfull \hbox (6.88477pt too wide) in paragraph at lines 132--135
+\OT1/cmr/m/n/12 c.msn.com, c.bing.com e as-sets.msn.com, tut-tavia potreb-bero 
+es-sere dei tracker
+ []
+
+[10]
+Overfull \hbox (11.62029pt too wide) in paragraph at lines 143--144
 \OT1/cmr/m/n/12 net si andr^^Ra ad es-eguire la fun-zione FUN[]0046C640 (ri-nom
 -i-nata a getAllDrives).
  []
 
-[10]
-Overfull \hbox (80.62877pt too wide) in paragraph at lines 131--132
+[11]
+Overfull \hbox (80.62877pt too wide) in paragraph at lines 153--154
 \OT1/cmr/m/n/12 parametro la chia-mata andr^^Ra a pro-durre la strut-tura SYS-T
 EM[]HANDLE[]INFORMATIONS.
  []
 
 
-Overfull \hbox (63.52647pt too wide) in paragraph at lines 139--140
+Overfull \hbox (63.52647pt too wide) in paragraph at lines 161--162
 []\OT1/cmr/m/n/12 Le en-try pre-senti nell'array sono del tipo SYS-TEM[]HANDLE[
 ]TABLE[]ENTRY[]INFO.
  []
 
 
-Overfull \hbox (5.77089pt too wide) in paragraph at lines 139--140
+Overfull \hbox (5.77089pt too wide) in paragraph at lines 161--162
 \OT1/cmr/m/n/12 Questa strut-tura con-tiene in-for-mazioni sulle han-dle, come 
 per es-em-pio Unique-
  []
 
-
-Overfull \hbox (3.75528pt too wide) in paragraph at lines 141--142
+[12]
+Overfull \hbox (3.75528pt too wide) in paragraph at lines 163--164
 \OT1/cmr/m/n/12 non doc-u-men-tata, tut-tavia viene chia-mata dall'API Du-pli-c
 ate-Han-dle). Quello
  []
 
-[11]
-Overfull \hbox (34.26265pt too wide) in paragraph at lines 149--150
+
+Overfull \hbox (34.26265pt too wide) in paragraph at lines 171--172
 \OT1/cmr/m/n/12 uti-liz-zare molte risorse. Suc-ces-si-va-mente viene chia-mata
  la fun-zione FUN[]0046BF70
  []
 
-[12] [13]
-Overfull \hbox (173.22658pt too wide) in paragraph at lines 179--180
-[]\OT1/cmr/m/n/12 Se ^^Re de-bug-gato forse parte su sv-chost, lo fa par-tire d
-a C:\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Windows\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 
-User\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 AppData\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 
-Local\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Temp\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 sv
-chost.exe
+[13] [14] [15]
+Overfull \hbox (5.83713pt too wide) in paragraph at lines 205--206
+\OT1/cmr/m/n/12 eVss-Back-up-Com-po-nentsIn-ter-nal, Vss-FreeSnap-sh-hot-Prop-e
+r-tiesIn-ter-nal. Prob-
+ []
+
+[16]
+Overfull \hbox (3.76521pt too wide) in paragraph at lines 210--211
+\OT1/cmr/m/n/12 "Soft-ware\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Microsoft\OMS/cmsy/
+m/n/12 n\OT1/cmr/m/n/12 Windows\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 CurrentVersion
+\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Run. An-dando a vedere sulla
  []
 
 
-Overfull \hbox (36.99844pt too wide) in paragraph at lines 183--184
-\OT1/cmr/m/n/12 In-oltre DNS a sb.scorecardresearch.com, img-s-msn-com.akamized
-.net, api.msn.com,
+Overfull \hbox (22.35715pt too wide) in paragraph at lines 210--211
+\OT1/cmr/m/n/12 doc-u-men-tazione si nota che questa ^^Re una sot-tochi-ave di 
+HKEY[]CURRENT[]USER
  []
 
 
-Overfull \hbox (1.94547pt too wide) in paragraph at lines 183--184
-\OT1/cmr/m/n/12 c.msn.com, c.bing.com, as-sets.msn.com (credo siano tracker). S
-i nota trasmis-
+Overfull \hbox (11.64584pt too wide) in paragraph at lines 214--215
+[]\OT1/cmr/m/n/12 Continuando l'analisi si nota an-che la pre-senza di una chia
+-mata a RegDelete-
  []
 
-[14] [15] (./homework4.aux)
 
-Package rerunfilecheck Warning: File `homework4.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+Overfull \hbox (5.88007pt too wide) in paragraph at lines 219--220
+\OT1/cmr/m/n/12 L'ultima fun-zione im-por-tante anal-iz-zata nel main ^^Re la f
+un-zione FUN[]00425870,
+ []
 
-Package rerunfilecheck Info: Checksums for `homework4.out':
-(rerunfilecheck)             Before: 1E5EE0FE29C0DD7BD8296641CF9F1005;4307
-(rerunfilecheck)             After:  6C548C21E6B581E70A02C621B7D2BA65;3950.
+[17]
+Overfull \hbox (7.33794pt too wide) in paragraph at lines 221--222
+\OT1/cmr/m/n/12 mod-i-fi-care le chi-avi di reg-istro con-tenute in HKEY[]CURRE
+NT[]USER\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Control
+ []
+
+[18] (./homework4.aux)
+Package rerunfilecheck Info: File `homework4.out' has not changed.
+(rerunfilecheck)             Checksum: 2BEA18289C56FEB2370BC366242D2629;3904.
  ) 
 Here is how much of TeX's memory you used:
- 7594 strings out of 478994
- 112870 string characters out of 5858183
- 413158 words of memory out of 5000000
- 24964 multiletter control sequences out of 15000+600000
+ 7589 strings out of 478994
+ 112781 string characters out of 5858183
+ 412158 words of memory out of 5000000
+ 24961 multiletter control sequences out of 15000+600000
  409104 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,74p,1492b,323s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.5.8} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.7} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.6} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on homework4.pdf (15 pages, 108885 bytes).
+ 71i,6n,74p,1492b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on homework4.pdf (18 pages, 117092 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

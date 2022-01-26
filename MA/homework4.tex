@@ -113,9 +113,31 @@ Nel caso sia disattivata la connessione si andrà ad eseguire la funzione FUN\_0
 Infine si eseguiranno una serie di funzioni per impostare classi usate successivamente dal sistema, per poi andare ad eseguire la parte fuori dall'IF comune ai due modi di esecuzione.  
 
 \subsection{Comunicazione internet attiva}
-Nel caso com sAaaaaaAAAAaaaaAAAAAAASDFGHJKJHGFDSA. Test con Wireshark ed indirizzo http trovato.
+Se il byte controllato in precedenza è diverso da 0, il malware andrà ad eseguire una serie di istruzioni alternative a quelle eseguite in precedenza.  In questa zona viene anche settata una variabile globale, tramite questa variabile si può vedere più avanti nell'analisi che si va a modificare il comportamento del thread che andrà a criptare i file. 
+
+Una funzione che sembra essere interessante è la funzione FUN\_00421720 (rinominata getSystemInfo). Al suo interno si possono vedere una serie di funzioni che raccolgono informazioni sulla macchina corrente, in particolare GetVersionExA. Si nota la presenza di una serie di stringhe che contengono vari nomi di versioni del sistema operativo Windows. Al termine di questa funzione si nota la chiamata alla funzione FUN\_004396E0, rinominata a gatherDataAndSend. Questa funzione viene vista anche all'interno del main dopo l'esecuzione della funzione getSystemInfo. Si passa ad analizzare la funzione gatherDataAndSend.
 
 \subsubsection{gatherDataAndSend}
+All'interno di questa funzione si notano chiamate a funzione per la generazione di dati casuali (CryptGenRandom). Successivamente si nota la presenza della funzione FUN\_00434FA0, questa funzione contiene chiamate ad altre funzioni per creare un hash, utilizzando per esempio CryptCreateHash e CryptSetHashParam. Tramite un breakpoint all'indirizzo 0043AA0C è possibile vedere i parametri della funzione che andrà chiamare la CryptHashData. Quello che verrà hashato è una stringa contenente i parametri di una richiesta http. Un esempio visto da un esecuzione con il debugger contiene:
+\begin{itemize}
+	\item Id generato
+	\item azione
+	\item lingua
+	\item versione
+	\item se è un server
+	\item se è un computer appartenente ad una azienda
+	\item se è una architettura x64
+\end{itemize}
+
+Queste informazioni vengono anche criptate con la funzione encryptWithAESENC trovata successivamente.
+Si notano all'interno della funzione FUN\_00436CB0, rinominata a communicateWithC\&C, api per eseguire richieste HTTP, come per esempio HTTPSendRequest. Il formato delle informazioni informazioni criptate ed hashate potrebbe indicare la presenza di parametri nella richiesta HTTP. Si nota la presenza della stringa "POST" ed "HTTP 1.1", da questo si può evincere che le richieste vengono fatte tramite il metodo POST.
+Per questo motivo si fa eseguire il malware e si osserva, tramite Wireshark, le chiamate che vengono eseguite. All'interno del log di wireshark si notano una serie di pacchetti DNS e TLS.  Alcune di queste richieste sono sb.scorecardresearch.com, img-s-msn-com.akamized.net, api.msn.com, c.msn.com, c.bing.com e assets.msn.com, tuttavia potrebbero essere dei tracker che vengono contattati da Edge quando aprirà asasin.htm. 
+
+Tramite esecuzione con debugger si può osservare  che le funzioni che andranno a far partire la richiesta http prenderanno l'indirizzo dallo stack. Osservando questo indirizzo si può notare che è incompleto, contenendo solamente "http:///", questo può indicare che nella configurazione del malware non è stato inserito nessun indirizzo IP. Eseguendo in questo modo e forzando l'esecuzione delle istruzioni che andranno ad eseguire richieste http si può notare che falliscano e che il programma termina, per questo motivo per analizzare chiamate a funzioni successive si sostituiscono le chiamate con NOP. 
+Si tenta tuttavia di inserire manualmente un indirizzo di una macchina locale per tentare di far connettere il malware però senza successo. 
+
+Tra le azioni viste in precedenza è presente l'azione getkey. Questo potrebbe indicare che il malware andrà a connettersi con un server di C\&C con cui comunicherà l'avvenuta infezione e otterrà dati, come per esempio la chiave da usare per criptare. Si può ipotizzare che nella prima richiesta si mandino le informazioni della macchina insieme ad una richiesta della chiave da utilizzare per criptare.
+Altre azioni viste sono quelle di gettext, che probabilmente si riferisce ad una richiesta di ricevere il testo contenente le istruzioni per ottenere il programma di decriptazione. 
 
 \subsection{Zona comune}
 Dopo aver eseguito la zona di codice relativa alle azioni fatte con o senza internet si andrà ad eseguire la funzione FUN\_0046C640 (rinominata a getAllDrives). In questa funzione si nota la presenza delle chiamate GetLogicalDrives, GetDriveType, GetDiskFreeSpaceExW e GetVolumeInformationW. Alcune di queste funzioni vengono eseguite all'interno di un ciclo, questo fa pensare che si stanno raccogliendo delle informazioni sui drive della macchina virtuale. Eseguendo questa funzione si nota come venga prodotta una stringa contenente "c:". Questa stringa può indicare il drive principale di WIndows, quindi si suppone che questa funzione vada a cercare i drive della macchina virtuale corrente, per questo viene rinominata a getAllDrives.
@@ -162,39 +184,44 @@ Dopo la ricerca dei file viene chiamata la funzione FUN\_00427AC0, questa funzio
 
 Successivamente si entra in un ciclo for, questo ciclo for probabilmente eseguirà una volta per ogni file da criptare. Al suo interno si trova la funzione FUN\_00413BE0, rinominata a encryptFile. Poi si nota la presenza di un IF con una chiamata alla funzione FUN\_0042E7D0. Quest'ultima avrà al suo interno la creazione di un file tramite la chiamata CreateFileW e la scrittura di un contenuto al suo interno tramite WriteFile. Prima della chiamata si trova l'estensione .htm che corrisponde ad uno dei file creati dal malware una volta terminato l'attacco. Questo può indicare che in questa zona viene creato il file .htm da mostrare all'utente. Si nota, tramite l'esecuzione del malware, che all'interno delle cartelle viene creato un nuovo file asasin.htm, questo fa' pensare che in questa zona viene creato questo file per le varie cartelle presenti nel sistema. (DA RISCRIVERE)
 
-Si passa ad analizzare la funzione encryptFile. 
+Si passa ad analizzare la funzione encryptFile. Questa funzione viene eseguita per tutti i file da criptare che sono stati trovati in precedenza. Al suo interno si utilizzerà la funzione GetFileAttributesExW con il parametro "GetFileExInfoStandard" per ottenere dei metadati sul file (come per esempio le dimensioni). Successivamente tramite la chiamata a CryptGenRandom verranno generati valori casuali che verranno utilizzati per generare il nome dei vari file criptati. Il nome dei file criptati è composto da l'identificatore della macchina e da un valore casuale, entrambi sono composti solamente da caratteri esadecimali. In questa serie di istruzioni saranno generati valori casuali per poi essere convertiti a stringa.
+
+Successivamente il file verrà aperto tramite la chiamata CreateFileW e letto per poi essere criptato dalla funzione FUN\_00473830 (rinominata ad encryptWithAESENC). Una volta criptati i dati verranno riscritti nel file, per poi modificare il file time utilizzando SetFileTime per impostarlo al valore di GetSystemTimeAsFileTime. Questi file avranno come momento di creazione il momento in cui sono stati criptati. Infine si va a flushare il contenuto del file per poi chiudere la handle. 
+
+All'interno della funzione encrypWithAESENC si notano tramite Ghidra la presenza di istruzioni AESENC. Queste istruzioni sono disponibili in versioni più recenti di CPU ed offrono il supporto hardware alla criptaggio di file. Si è tentato di analizzare dinamicamente questa funzione, tuttavia le istruzioni AESENC non vengono riconosciute da OllyDbg e portano allo scorretto del debugger. Tuttavia il loro funzionamento si può derivare dal manuale Intel e dal contesto in cui vengono utilizzate. 
+
 \subparagraph{Connessione ad internet attiva}
+All'interno della funzione cryptFiles, se un byte di controllo è uguale a 0 si andranno ad eseguire una serie di istruzioni aggiuntive. Si ritrova la chiamata alla funzione analizzata in precedenza gatherDataAndSend. Andando a vedere i parametri di questa funzione si può notare una stringa contenente i parametri da inviare tramite la richiesta http, in questa stringa troviamo: \begin{itemize}
+	\item ID della macchina
+	\item l'azione da eseguire: in questo caso contiene la stringa stats
+	\item numero di file criptati
+	\item numero di file in cui si ha avuto un fallimento durante la cifratura
+	\item lunghezza: probabilmente indica quanti byte sono stati criptati
+\end{itemize} 
 
-\subsubsection{Richieste RPC}
+Con questa richiesta si andranno ad inviare al server di C\&C statistiche sulla infezione in corso. Per riuscire ad arrivare a debuggare questa zona è stato necessario modificare i salti condizionali fatti dal malware.
 
-\subsubsection{Scrittura su chiavi di registro}
+\subsubsection{Richieste IPC}
+Dopo la creazione dei thread si vede nel main la chiamata alla funzione FUN\_0040FA10 (rinominata a deleteShadow). Analizzando questa funzione si vedono chiamate alla libreria COM che offre servizi di Inter Process Communication.  Si nota la presenza di una stringa offuscata, questa stringa contiene il comando "vssadmin.exe Delete Shadows /Quiet /All". Questo comando può essere utilizzato per eliminare i shadow volumes presenti in windows. Questi volumi contengono una versione precedente dei dati contenuti in una cartella, quindi è interesse del malware cancellarli per impedire di recuperare i dati dopo l'infezione. Si nota anche la presenza della funzione FUN\_00478420, questa funzione andrà a caricare la vssapi.dll e le api CreateVssBackupComponentsInternal, VssFreeSnapshhotPropertiesInternal. Probabilmente vengono utilizzate queste istruzioni come metodo alternativo per eliminare shadow volumes. 
+
+Infine si nota la chiamata della funzione FUN\_0040D5C0, al suo interno si vede l'utilizzo della libreria COM per chiamare funzioni tramite IPC. Tuttavia non tramite debugger non è possibile vedere che funzioni vengono chiamate. Nonostante ciò si può notare che vengono chiamati funzioni di taskchd. Quest'ultimo viene utilizzato per gestire le task in windows. 
+  
+\subsubsection{Persistenza del malware}
+Continuando con l'analisi del main, si notano una serie di chiamate a funzioni per gestire chiavi di registri di Windows. Si nota la presenza della stringa "Software\textbackslash Microsoft\textbackslash Windows\textbackslash CurrentVersion\textbackslash Run. Andando a vedere sulla documentazione si nota che questa è una sottochiave di HKEY\_CURRENT\_USER che viene utilizzata per far partire programmi all'avvio del sistema. Si nota la presenza di una chiamata a RegSetValueExW, questo fa' pensare che il malware si aggiunga ai programmi da far partire al boot. Tramite debugger si vedono che i parametri di RegSetValueExW sono "opt321" con tipo REG\_SZ ed il path del malware. Questo indica che il malware imposterà il nome opt321 per i programmi da attivare nello startup. 
+
+Queste operazioni sui registri vengono fatti solamente se un determinato valore della zona di memoria allocata in precedenza è diversa da 0. Questo può indicare che a seconda della configurazione del malware si possono fare determinate operazioni. Nel caso di esecuzione normale queste azioni non vengono eseguite. Per attivarle si va a modificare sul debugger queste zone di memoria. 
+
+Continuando l'analisi si nota anche la presenza di una chiamata a RegDeleteValueA, questo cancellerà la chiave precedentemente aggiunta.
+
+Inoltre si nota la presenza della funzione FUN\_004273C0, questa funzione viene rinominata a addAtoms. Al suo interno verranno chiamate le API per l'aggiunta di atoms nella tabella globale ed in quella dell'applicazione. Queste funzioni aggiungeranno l'atom "\textasciitilde\textasciitilde\textasciitilde ID\textasciitilde\textasciitilde\textasciitilde" dove ID è l'ID generato in precedenza. 
 
 \subsubsection{Creazione immagini e cambio wallpaper}
+L'ultima funzione importante analizzata nel main è la funzione FUN\_00425870, rinominata a createImagesAndEditWallpaper. Al suo interno si possono notare una serie di stringhe che possono corrispondere a chiavi di registro, queste chiavi trovate possono essere utilizzate per cambiare wallpaper al sistema. Questo è una azione eseguita dal malware, quindi si pensa che venga fatta all'interno di questa funzione. Si nota la chiamata alla funzione FUN\_0042E6B0, al suo interno si trova la chiamata a FindFirstFileW per ricercare un file nel sistema, per questo motivo viene rinominata a searchFile. Sono presenti due chiamate a searchFile, la prima per trovare asasin.htm presente nel desktop, se non viene trovata si va a chiamare la funzione FUN\_0042E7D0 che creerà la pagina HTML del malware. Successivamente c'è una nuova chiamata alla funzione searchFile che andrà a cercare la bitmap asasin.bmp. Questa bitmap è quella che viene aperta una volta che il sistema è stato infettato. Se questa bitmap non viene trovata si andrà a generare tramite la funzione FUN\_004248B0, al suo interno si possono notare molte chiamate a funzioni di Windows per generare bitmap, come per esempio CreateCombatibleBitmap. 
 
+Una volta ottenuta la bitmap (creandola o ricercandola) si andranno a modificare le chiavi di registro contenute in  HKEY\_CURRENT\_USER\textbackslash Control Panel\textbackslash Desktop. Le chiavi modificate sono WallpaperStyle, che viene impostata a 0, ed TileWallpaper, che viene impostata al percorso della bitmap. In questo modo il malware può cambiare lo sfondo del desktop mostrando l'immagine che mostra l'avvenuta infezione all'utente. 
 
+Infine si notano le chiamate alla funzione ShellExecuteW, utilizzando il debugger è possibile vedere che venga eseguito il comando "open" sulla bitmap e sulla pagina .htm. Con queste due chiamate si andranno a mostrare all'utente la pagina .htm e la bitmap.
 
-
-Per l'encrypt dei dati sono presenti istruzioni AESENC dell'SEE. HTML presente nella zona virtualallocata.
-
-Se è debuggato forse parte su svchost, lo fa partire da C:\textbackslash Windows\textbackslash User\textbackslash AppData\textbackslash Local\textbackslash Temp\textbackslash svchost.exe poiché farà una copia dell'eseguibile utilizzando CopyFileW.
-
-Usa chiavi di registri per cambiare il wallpaper all'interno di launch something. 
-
-Si controlla il traffico utilizzando Wireshark. Si notano query DNS a WPAD (Web Proxy Auto-Discovery) ma dovrebbe essere proxy di Windows. Inoltre DNS a sb.scorecardresearch.com, img-s-msn-com.akamized.net, api.msn.com, c.msn.com, c.bing.com, assets.msn.com (credo siano tracker). Si nota trasmissione di dati con un indirizzo 204.79.197.219 probabilmente per ottenere la chiave di cifratura per il malware. 
-
-securelist.it - locky
-
-
-\paragraph{Analisi thread di cifratura}
-Continuando l'analisi si nota la presenza all'interno della funzione main di uno spawn di un thread, questo thread andrà ad eseguire subito dopo la creazione nella funzione threadFunction (FUN\_00429b40).  In questa funzione si andranno a modificare le priorità del thread corrente utilizzando le chiamate a GetCurrentThread e SetThreadPriority, viene impostata una bassa priorità (THREAD\_PRIORITY\_LOWEST).
-
-Sucessivamente si andrà a chiamare la funzione 
-PREPARA WHITE LIST di direcotry e file e si preleva tutte le classi, poi chiama quella che cripta. In prepareCSP si andrà a prendere una chiave RSA che veniva mantenuta nella memoria allocata all'inizio dell'esecuzione del malware, chiave RSA1 (probabilemte pubblica usata per criptare la chiave vera). Vengono usate funzioni criptografiche che generano dati casuali per il nome del nuovo file. Usa la chiave RSA1. 
-
-\subparagraph{encryptFile}
-Possono essere usate anche le istruzioni AESENC con accellerazione, tuttavia queste istruzioni non vengono riconosciute da OllyDBG. Questa funzione encryptWithAESENC andrà a criptare i dati presi dal file. Inoltre imposterà la data di creazione del file al tempo corrente.
-
-Forse il malware ha disattivato la comunicazione con internet, questo perché la funzione che cripta non andrà a comunicare con internet(??????).
 \section{Riassunto}
 
 \end{document}
