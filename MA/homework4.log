@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  28 JAN 2022 10:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  5 FEB 2022 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -259,159 +259,128 @@ Overfull \hbox (7.88615pt too wide) in paragraph at lines 38--40
 izzo 0x0040EA13
  []
 
-[2] [3]
-Overfull \hbox (28.87898pt too wide) in paragraph at lines 50--51
-[]\OT1/cmr/m/n/12 Una volta de-of-fus-cato il mal-ware si nota l'entry point or
-ig-i-nale dell'applicazione,
- []
-
-
-Overfull \hbox (3.4912pt too wide) in paragraph at lines 53--54
-\OT1/cmr/m/n/12 All'interno del main-Wrap-per si nota la chia-mata della fun-zi
-one FUN[]00477050
- []
-
-[4]
-Overfull \hbox (1.11484pt too wide) in paragraph at lines 65--66
+[2] [3] [4]
+Overfull \hbox (1.11484pt too wide) in paragraph at lines 68--69
 \OT1/cmr/m/n/12 (FUN[]00401018) che scrive su FS:[0], questa fun-zione viene ch
 ia-mata all'inizio
  []
 
 
-Overfull \hbox (4.36536pt too wide) in paragraph at lines 67--68
+Overfull \hbox (4.36536pt too wide) in paragraph at lines 70--71
 []\OT1/cmr/m/n/12 Successivamente si nota la pre-senza della chia-mata a SetEr-
 ror-Mode, questo
  []
 
-[5] [6] [7]
+[5]
+Overfull \hbox (0.13568pt too wide) in paragraph at lines 76--77
+\OT1/cmr/m/n/12 Successivamente nel main viene chia-mata la fun-zione FUN[]0042
+CF00 , questa
+ []
+
+[6] [7]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-00.
+03.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 100.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
 
-Overfull \hbox (0.15706pt too wide) in paragraph at lines 100--101
+Overfull \hbox (0.15706pt too wide) in paragraph at lines 103--104
 \OT1/cmr/m/n/12 All'interno di questa fun-zione verr^^Ra gen-er-ato l'hash che 
 iden-ti-fica la macchina,
  []
 
 
-Overfull \hbox (2.60014pt too wide) in paragraph at lines 100--101
+Overfull \hbox (2.60014pt too wide) in paragraph at lines 103--104
 \OT1/cmr/m/n/12 zione GetVol-u-me-Name-For-Vol-umeM-o-unt-PointA. Una volta pre
 l-e-vato il GUID,
  []
 
 
-Overfull \hbox (44.59727pt too wide) in paragraph at lines 100--101
+Overfull \hbox (44.59727pt too wide) in paragraph at lines 103--104
 \OT1/cmr/m/n/12 si pre-parer^^Ra una CSP (cryp-to-graphic ser-vice provider), c
 on tipolo-gia PROV[]RSA[]AES
  []
 
-
-Overfull \hbox (16.85774pt too wide) in paragraph at lines 100--101
-\OT1/cmr/m/n/12 hash con la fun-zione CryptCre-ate-Hash, questa uti-lizzer^^Ra 
-l'algoritmo CALG[]MD5
- []
-
 [8]
-Overfull \hbox (16.45929pt too wide) in paragraph at lines 108--110
+Overfull \hbox (16.45929pt too wide) in paragraph at lines 111--113
 \OT1/cmr/m/n/12 stringa of-fus-cata "YB-N-DRFG8EJKMCPQX0T1UWISZA345H769". Es-eg
 uendo
  []
 
-[9]
-Overfull \hbox (51.97368pt too wide) in paragraph at lines 130--133
+[9] [10]
+Overfull \hbox (51.97368pt too wide) in paragraph at lines 133--136
 \OT1/cmr/m/n/12 AES-ENC trovata suc-ces-si-va-mente. Si no-tano all'interno del
 la fun-zione FUN[]00436CB0,
  []
 
 
-Overfull \hbox (6.88477pt too wide) in paragraph at lines 130--133
+Overfull \hbox (6.88477pt too wide) in paragraph at lines 133--136
 \OT1/cmr/m/n/12 c.msn.com, c.bing.com e as-sets.msn.com, tut-tavia potreb-bero 
 es-sere dei tracker
  []
 
-[10]
-Overfull \hbox (4.98756pt too wide) in paragraph at lines 137--139
+[11]
+Overfull \hbox (4.98756pt too wide) in paragraph at lines 140--142
 []\OT1/cmr/m/n/12 Uno dei parametri visti in prece-denza ^^Re il parametro "act
 ", questo potrebbe
  []
 
-
-Overfull \hbox (11.62029pt too wide) in paragraph at lines 141--142
-\OT1/cmr/m/n/12 net si andr^^Ra ad es-eguire la fun-zione FUN[]0046C640 (ri-nom
--i-nata a getAllDrives).
- []
-
-[11]
-Overfull \hbox (0.7296pt too wide) in paragraph at lines 151--152
+[12]
+Overfull \hbox (0.7296pt too wide) in paragraph at lines 155--156
 \OT1/cmr/m/n/12 SYSTEM[]HANDLE[]INFORMATIONS. Questa strut-tura tut-tavia non ^
 ^Re doc-
  []
 
-[12]
-Overfull \hbox (40.59123pt too wide) in paragraph at lines 163--164
-\OT1/cmr/m/n/12 openAndSwap. Questa volta si passer^^Ra il parametro DU-PLI-CAT
-E[]CLOSE[]SOURCE
+[13]
+Overfull \hbox (2.5158pt too wide) in paragraph at lines 167--168
+\OT1/cmr/m/n/12 Questa volta si passer^^Ra il parametro DU-PLI-CATE[]CLOSE[]SOU
+RCE in modo
  []
 
-
-Overfull \hbox (34.26265pt too wide) in paragraph at lines 169--170
-\OT1/cmr/m/n/12 uti-liz-zare molte risorse. Suc-ces-si-va-mente viene chia-mata
- la fun-zione FUN[]0046BF70
- []
-
-[13] [14] [15]
-Overfull \hbox (5.83713pt too wide) in paragraph at lines 203--204
+[14] [15] [16]
+Overfull \hbox (5.83713pt too wide) in paragraph at lines 207--208
 \OT1/cmr/m/n/12 eVss-Back-up-Com-po-nentsIn-ter-nal, Vss-FreeSnap-sh-hot-Prop-e
 r-tiesIn-ter-nal. Prob-
  []
 
-[16]
-Overfull \hbox (3.76521pt too wide) in paragraph at lines 208--209
-\OT1/cmr/m/n/12 "Soft-ware\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Microsoft\OMS/cmsy/
-m/n/12 n\OT1/cmr/m/n/12 Windows\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 CurrentVersion
-\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Run. An-dando a vedere sulla
+[17]
+Overfull \hbox (83.7829pt too wide) in paragraph at lines 212--213
+\OT1/cmr/m/n/12 vedere sulla doc-u-men-tazione si nota che questa ^^Re una sot-
+tochi-ave di HKEY[]CURRENT[]USER
  []
 
 
-Overfull \hbox (22.35715pt too wide) in paragraph at lines 208--209
-\OT1/cmr/m/n/12 doc-u-men-tazione si nota che questa ^^Re una sot-tochi-ave di 
-HKEY[]CURRENT[]USER
- []
-
-
-Overfull \hbox (11.64584pt too wide) in paragraph at lines 212--213
+Overfull \hbox (11.64584pt too wide) in paragraph at lines 216--217
 []\OT1/cmr/m/n/12 Continuando l'analisi si nota an-che la pre-senza di una chia
 -mata a RegDelete-
  []
 
-[17]
-Overfull \hbox (5.88007pt too wide) in paragraph at lines 217--218
+
+Overfull \hbox (5.88007pt too wide) in paragraph at lines 221--222
 \OT1/cmr/m/n/12 L'ultima fun-zione im-por-tante anal-iz-zata nel main ^^Re la f
 un-zione FUN[]00425870,
  []
 
-
-Overfull \hbox (7.33794pt too wide) in paragraph at lines 219--220
+[18]
+Overfull \hbox (7.33794pt too wide) in paragraph at lines 223--224
 \OT1/cmr/m/n/12 mod-i-fi-care le chi-avi di reg-istro con-tenute in HKEY[]CURRE
 NT[]USER\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Control
  []
 
-[18] [19] (./homework4.aux)
+[19] [20] (./homework4.aux)
 Package rerunfilecheck Info: File `homework4.out' has not changed.
 (rerunfilecheck)             Checksum: 2BEA18289C56FEB2370BC366242D2629;3904.
  ) 
 Here is how much of TeX's memory you used:
- 7590 strings out of 478994
- 112788 string characters out of 5858183
+ 7591 strings out of 478994
+ 112795 string characters out of 5858183
  412158 words of memory out of 5000000
  24961 multiletter control sequences out of 15000+600000
  409104 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,6n,74p,1492b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,6n,74p,1501b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
@@ -419,10 +388,10 @@ usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on homework4.pdf (19 pages, 118816 bytes).
+Output written on homework4.pdf (20 pages, 120368 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 230 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
+ 264 PDF objects out of 1000 (max. 8388607)
+ 233 compressed objects within 3 object streams
+ 52 named destinations out of 1000 (max. 500000)
  201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
