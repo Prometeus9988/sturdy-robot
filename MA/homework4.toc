@@ -22,7 +22,7 @@
 \contentsline {subsubsection}{\numberline {5.5.2}Creazione thread }{14}{subsubsection.5.5.2}%
 \contentsline {paragraph}{Analisi threadMalwareCrypt}{14}{section*.3}%
 \contentsline {subparagraph}{Ricerca dei file}{14}{section*.4}%
-\contentsline {subparagraph}{Funzione di criptaggio}{15}{section*.5}%
+\contentsline {subparagraph}{Funzione di criptazione}{15}{section*.5}%
 \contentsline {subparagraph}{Connessione ad internet attiva}{17}{section*.6}%
 \contentsline {subsubsection}{\numberline {5.5.3}Richieste IPC}{17}{subsubsection.5.5.3}%
 \contentsline {subsubsection}{\numberline {5.5.4}Persistenza del malware}{18}{subsubsection.5.5.4}%

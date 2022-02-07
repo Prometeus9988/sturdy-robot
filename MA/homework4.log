@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  5 FEB 2022 16:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  7 FEB 2022 16:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,92 +279,98 @@ CF00 , questa
 
 [6] [7]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-03.
+04.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
 
-Overfull \hbox (0.15706pt too wide) in paragraph at lines 103--104
+Overfull \hbox (0.15706pt too wide) in paragraph at lines 104--105
 \OT1/cmr/m/n/12 All'interno di questa fun-zione verr^^Ra gen-er-ato l'hash che 
 iden-ti-fica la macchina,
  []
 
 
-Overfull \hbox (2.60014pt too wide) in paragraph at lines 103--104
+Overfull \hbox (2.60014pt too wide) in paragraph at lines 104--105
 \OT1/cmr/m/n/12 zione GetVol-u-me-Name-For-Vol-umeM-o-unt-PointA. Una volta pre
 l-e-vato il GUID,
  []
 
 
-Overfull \hbox (44.59727pt too wide) in paragraph at lines 103--104
+Overfull \hbox (44.59727pt too wide) in paragraph at lines 104--105
 \OT1/cmr/m/n/12 si pre-parer^^Ra una CSP (cryp-to-graphic ser-vice provider), c
 on tipolo-gia PROV[]RSA[]AES
  []
 
 [8]
-Overfull \hbox (16.45929pt too wide) in paragraph at lines 111--113
+Overfull \hbox (16.45929pt too wide) in paragraph at lines 112--114
 \OT1/cmr/m/n/12 stringa of-fus-cata "YB-N-DRFG8EJKMCPQX0T1UWISZA345H769". Es-eg
 uendo
  []
 
 [9] [10]
-Overfull \hbox (51.97368pt too wide) in paragraph at lines 133--136
+Overfull \hbox (51.97368pt too wide) in paragraph at lines 134--137
 \OT1/cmr/m/n/12 AES-ENC trovata suc-ces-si-va-mente. Si no-tano all'interno del
 la fun-zione FUN[]00436CB0,
  []
 
 
-Overfull \hbox (6.88477pt too wide) in paragraph at lines 133--136
+Overfull \hbox (6.88477pt too wide) in paragraph at lines 134--137
 \OT1/cmr/m/n/12 c.msn.com, c.bing.com e as-sets.msn.com, tut-tavia potreb-bero 
 es-sere dei tracker
  []
 
 [11]
-Overfull \hbox (4.98756pt too wide) in paragraph at lines 140--142
+Overfull \hbox (4.98756pt too wide) in paragraph at lines 141--143
 []\OT1/cmr/m/n/12 Uno dei parametri visti in prece-denza ^^Re il parametro "act
 ", questo potrebbe
  []
 
 [12]
-Overfull \hbox (0.7296pt too wide) in paragraph at lines 155--156
+Overfull \hbox (0.7296pt too wide) in paragraph at lines 156--157
 \OT1/cmr/m/n/12 SYSTEM[]HANDLE[]INFORMATIONS. Questa strut-tura tut-tavia non ^
 ^Re doc-
  []
 
 [13]
-Overfull \hbox (2.5158pt too wide) in paragraph at lines 167--168
-\OT1/cmr/m/n/12 Questa volta si passer^^Ra il parametro DU-PLI-CATE[]CLOSE[]SOU
-RCE in modo
+Overfull \hbox (1.85843pt too wide) in paragraph at lines 168--169
+\OT1/cmr/m/n/12 fatto poich^^Se las-ciare han-dle aperte da al-tri pro-cessi po
+trebbe portare a qualche
  []
 
-[14] [15] [16]
-Overfull \hbox (5.83713pt too wide) in paragraph at lines 207--208
-\OT1/cmr/m/n/12 eVss-Back-up-Com-po-nentsIn-ter-nal, Vss-FreeSnap-sh-hot-Prop-e
-r-tiesIn-ter-nal. Prob-
+[14]
+Overfull \hbox (1.47412pt too wide) in paragraph at lines 179--180
+\OT1/cmr/m/n/12 FUN[]00462B10 (ri-nom-i-nata a check-Per-mis-sion). Questa uti-
+lizzer^^Ra Get-FileSe-
  []
 
-[17]
-Overfull \hbox (83.7829pt too wide) in paragraph at lines 212--213
+
+Overfull \hbox (46.18744pt too wide) in paragraph at lines 179--180
+\OT1/cmr/m/n/12 All'interno di questo ci-clo si es-eguiranno le fun-zioni FUN[]
+0043C160 e FUN[]0043EAD0.
+ []
+
+[15] [16] [17]
+Overfull \hbox (83.7829pt too wide) in paragraph at lines 213--214
 \OT1/cmr/m/n/12 vedere sulla doc-u-men-tazione si nota che questa ^^Re una sot-
 tochi-ave di HKEY[]CURRENT[]USER
  []
 
 
-Overfull \hbox (11.64584pt too wide) in paragraph at lines 216--217
+Overfull \hbox (11.64584pt too wide) in paragraph at lines 217--218
 []\OT1/cmr/m/n/12 Continuando l'analisi si nota an-che la pre-senza di una chia
 -mata a RegDelete-
  []
 
 
-Overfull \hbox (5.88007pt too wide) in paragraph at lines 221--222
+Overfull \hbox (5.88007pt too wide) in paragraph at lines 222--223
 \OT1/cmr/m/n/12 L'ultima fun-zione im-por-tante anal-iz-zata nel main ^^Re la f
 un-zione FUN[]00425870,
  []
 
 [18]
-Overfull \hbox (7.33794pt too wide) in paragraph at lines 223--224
+Overfull \hbox (7.33794pt too wide) in paragraph at lines 224--225
 \OT1/cmr/m/n/12 mod-i-fi-care le chi-avi di reg-istro con-tenute in HKEY[]CURRE
 NT[]USER\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Control
  []
@@ -388,7 +394,7 @@ usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on homework4.pdf (20 pages, 120368 bytes).
+Output written on homework4.pdf (20 pages, 120694 bytes).
 PDF statistics:
  264 PDF objects out of 1000 (max. 8388607)
  233 compressed objects within 3 object streams
