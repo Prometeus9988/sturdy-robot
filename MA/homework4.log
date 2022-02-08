@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  7 FEB 2022 16:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  8 FEB 2022 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -277,7 +277,7 @@ Overfull \hbox (0.13568pt too wide) in paragraph at lines 76--77
 CF00 , questa
  []
 
-[6] [7]
+[6] [7] [8]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
 04.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
@@ -303,7 +303,7 @@ Overfull \hbox (44.59727pt too wide) in paragraph at lines 104--105
 on tipolo-gia PROV[]RSA[]AES
  []
 
-[8]
+
 Overfull \hbox (16.45929pt too wide) in paragraph at lines 112--114
 \OT1/cmr/m/n/12 stringa of-fus-cata "YB-N-DRFG8EJKMCPQX0T1UWISZA345H769". Es-eg
 uendo
@@ -339,16 +339,22 @@ Overfull \hbox (1.85843pt too wide) in paragraph at lines 168--169
 trebbe portare a qualche
  []
 
-[14]
-Overfull \hbox (1.47412pt too wide) in paragraph at lines 179--180
-\OT1/cmr/m/n/12 FUN[]00462B10 (ri-nom-i-nata a check-Per-mis-sion). Questa uti-
-lizzer^^Ra Get-FileSe-
+
+Overfull \hbox (61.94342pt too wide) in paragraph at lines 174--175
+\OT1/cmr/m/n/12 razione), se si su-pera il con-trollo verr^^Ra im-postata la mo
+dalit^^Ra THREAD[]BACKGROUND.
  []
 
-
+[14]
 Overfull \hbox (46.18744pt too wide) in paragraph at lines 179--180
 \OT1/cmr/m/n/12 All'interno di questo ci-clo si es-eguiranno le fun-zioni FUN[]
 0043C160 e FUN[]0043EAD0.
+ []
+
+
+Overfull \hbox (50.95322pt too wide) in paragraph at lines 186--187
+ []\OT1/cmr/bx/n/12 Funzione di crip-tazione[] \OT1/cmr/m/n/12 Dopo la ricerca 
+dei file viene chia-mata FUN[]00427AC0,
  []
 
 [15] [16] [17]
@@ -394,7 +400,7 @@ usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on homework4.pdf (20 pages, 120694 bytes).
+Output written on homework4.pdf (20 pages, 120831 bytes).
 PDF statistics:
  264 PDF objects out of 1000 (max. 8388607)
  233 compressed objects within 3 object streams
