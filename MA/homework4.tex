@@ -5,7 +5,6 @@
 	linkcolor=blue,
 	filecolor=magenta,      
 	urlcolor=cyan,
-	pdftitle={Overleaf Example},
 	pdfpagemode=FullScreen,
 }
 
@@ -187,7 +186,7 @@ Dopo la ricerca dei file viene chiamata FUN\_00427AC0, questa funzione viene rin
 
 Successivamente si entra in un ciclo for, questo ciclo probabilmente eseguirà una volta per ogni file da criptare. Al suo interno si trova la funzione FUN\_00413BE0, rinominata a encryptFile. Poi si nota la presenza di un IF con una chiamata alla funzione FUN\_0042E7D0. Quest'ultima avrà al suo interno la creazione di un file tramite la chiamata CreateFileW e la scrittura di un contenuto al suo interno tramite WriteFile. Prima della chiamata si trova l'estensione .htm che corrisponde ad uno dei file creati dal malware una volta terminato l'attacco. Questo può indicare che in questa zona viene creato il file .htm da mostrare all'utente. Si nota, tramite l'esecuzione del malware, che all'interno delle cartelle viene creato un nuovo file asasin.htm, questo fa' pensare che in questa zona viene creato questo file per le varie cartelle presenti nel sistema.
 
-Si passa ad analizzare la funzione encryptFile. Questa funzione viene eseguita per tutti i file da criptare che sono stati trovati in precedenza. Al suo interno si utilizzerà la funzione GetFileAttributesExW con il parametro "GetFileExInfoStandard" per ottenere dei metadati sul file (come per esempio le dimensioni).  Il nome dei file criptati è composto da l'identificatore della macchina e da un valore casuale, entrambi sono composti solamente da caratteri esadecimali. In questa serie di istruzioni saranno generati valori casuali per poi essere convertiti a stringa.
+Si passa ad analizzare la funzione encryptFile. Questa funzione viene eseguita per tutti i file da criptare che sono stati trovati in precedenza. Al suo interno si utilizzerà la funzione GetFileAttributesExW con il parametro "GetFileExInfoStandard" per ottenere dei metadati sul file (come per esempio le dimensioni).  Il nome dei file criptati è composto da l'identificatore della macchina e da un valore casuale, entrambi sono composti solamente da caratteri esadecimali. In questa serie di istruzioni saranno generati valori casuali per poi essere convertiti a stringa. 
 Si nota la presenza della chiamata a CryptEncryt, questa potrebbe essere utilizzata per criptare la chiave generata casualmente utilizzando la chiave RSA del malware.
 Successivamente il file verrà aperto tramite la chiamata CreateFileW e letto per poi essere criptato dalla funzione FUN\_00473830 (rinominata ad encryptWithAESENC). Una volta criptati i dati verranno riscritti nel file, per poi modificare il file time utilizzando SetFileTime per impostarlo al valore di GetSystemTimeAsFileTime. Questi file avranno come momento di creazione il momento in cui sono stati criptati. Infine si va a flushare il contenuto del file per poi chiudere la handle. 
 

@@ -1,0 +1,97 @@
+\documentclass[]{article}
+\usepackage{amsmath}
+
+%opening
+\title{IOTPA}
+\author{Daniele Ferrarelli}
+\date{}
+
+\begin{document}
+
+\maketitle
+\section{Multiple Access protocols}
+Any signal occupies a range of frequencies in a given period of time (void for phone applications 0-4KHz). Multiple access: several users that want to occupy a channel. Need to establish a rule to synchronize multiple users to access a shared channel. The first solution used id Frequency Division Multiple Access.
+
+\subsection{FDMA}
+Different users occupy different frequencies. They transmit simultaneously on different frequency. To receive information from a user use a filter that get only the frequency from one user. Orthogonal access to the channel, each user has a different resource of the channel. Can work on analog signal. 
+
+\subsection{TDMA}
+Time Division Multiple Access works only on digital signals. Each user has a different time slot. Time is partitioned in different frames, each divided in slots. Each time slot is assigned to a different user based on some decision on the scheduling. Doesn't work on analog because it need to store the signal. To do this multiple access scheme all the transmitters need to synchronize the clocks. Need to do some work to synchronize the clocks, done by a coordinator or by the users. Need additional bits transmitted with the data to synchronize. TDMA has some overhead. 
+
+\subsection{CDMA}
+Code Division Multiple Access transmit overlapping time and frequencies. Each user has a code that identifies it. 
+
+\subsection{Contention Based MA}
+If there a lot of sensors that not always transmit using previous MA protocols there is a waste of resources as they need to allocate resources. With contention based, multiple sensors transmit when they need.  They don't occupy a resource. In case of collision they retransmit. Also there is no overhead to synchronized the clocks. The power for TX is used for transmitting only the data and not for the overhead. 
+ Examples of contentions protocols:
+ \begin{itemize}
+ 	\item ALOHA: as soon as a node has a packet it transmit, usually the receiver send an ACK. In case of collision transmit again. 
+ 	\item Slotted ALOHA: need to reduce collision probability without introducing overhead. Time is divided in slots but they are not assigned. When a node need to transmit, do it in a slot. Collision might occur, but only with total overlapping
+ 	\item CSMA: Carrier Sense Multiple Access, when the node need to transmit, listen to the channel (in receiver mode) to understand if someone else is transmitting. If channel is free transmit, if is busy transmit when it is free. Collision might occur when multiple channel are waiting for the channel. Also listening the channel consume energy. 
+ 	\item CSMA\textbackslash CA: wait random time when channel is free to prevent previous case, but it introduces latency. Need to verify that for the current application the latency is not important. 
+ 	\item CSMA\textbackslash CA RTS\textbackslash CTS: Hidden Terminal Problem: one terminal cannot listen to an hidden terminal. When they are transmitting might collide. With WiFi there is the introduction of RTS and CTS. Request To Send and Clear To Send (see slide). Lots of overhead for this MA protocol. Exposure terminal problem still remains (see slides). Previous protocol can fail if some configuration of node is present. When transmitting lots amount of data there is no problem, but for WSN that transmit few bytes there is an issue. 
+ \end{itemize}
+For WSN there are other protocols more suited for the use case. Usually schedule protocols are more efficient. A tradeoff is using random access to schedule a transmitting slot. Then transmit using schedule protocols. 
+
+
+\subsection{Exercise 1}
+1 Node that generates 10 Bytes each 16 milliseconds. The overhead is 25 bytes.  The communication technology transmit at a speed of 250 Kbps. The power consumption is 50 mW. The energy in the battery is $ 10^{4} $ Joules. Consumed energy is P * TTX = 56 * 10
+\begin{equation}\label{a}
+	bits = 35 * 8 = 280 bits
+\end{equation}
+
+\begin{equation}\label{b}
+	T_{TX} = 25 * 8/250 * 10^{3} = 1.12 ms
+\end{equation}
+
+\begin{equation}\label{c}
+	E_{tx} = P * T_{TX} = 56 * 10^{-6} J
+\end{equation}
+
+\begin{equation}\label{d}
+	Lifetime = \frac{E_{battery}}{E_{TX} * T_{round}} = N_{rounds}* 16ms
+\end{equation}
+
+If double the time between each round doubling the data it is more efficient. Because the overhead is applied to more data. 
+
+\paragraph{dB}
+Measuring power in communication systems is common to use the dB. Assume to measure the power measured in W, use the ration of the power and a reference power. 
+\begin{equation}\label{e}
+	dB = 10 log_{10} \frac{P}{P_{ref}}
+\end{equation}
+Usually the reference power is 1 W. In the case of 10 W the result is 10 dBW. 100 W is 20 dBW. In the case on the dBm the reference power is 1 mW, used when using low power levels. $ 0 dBm = 1 mW $
+\section{WSN}
+\subsection{Energy Efficiency}
+Energy efficiency is one the main challenge of WSN. $ Consumed Power = absorbed power * voltage $ To transmit there is a need for a determined level of minimum current. Reducing the output power does not affect much the current control. 
+
+Even going from sleep mode to awake there is a power consumption. Waking up frequently uses lots of energy. 
+
+One cycle of  a WSN consist in.
+\begin{enumerate}
+	\item The sink node sends a trigger packet
+	\item Sensor node sense the channel to check when it can transmit
+	\item The sensor transmit the data
+	\item After some second the node goes to sleep
+	\item Periodically the sensors wake up to check if the trigger packet is transmitted
+\end{enumerate}
+
+In conclusion it might be useful to perform more computing on the node to transmit less data, and to put the sensor in sleep mode as much as possible.
+
+To improve the energy efficiency there are 3 approaches:
+\begin{itemize}
+	\item Low duty cycle operations
+	\item Data-driver approaches
+	\item Mobility-based approaches
+\end{itemize}
+
+\subsubsection{Duty cycling}
+Duty cycling is based on as much sleep as possible for the node. Two types Topology Control and Power Management.
+
+In case of Topology Control only a subset of nodes is chosen to be active. Using redundant nodes. Two basic approaches Location driven and Connectivity Driven. 
+\paragraph{Location driven}
+The area to be monitored is divided in virtual grids. A node know in which grid it is, also it needs to communicate with nodes in other areas. There is a maximum range for the communication. The idea is that for each virtual grid, only one node is awake (to reduce energy consumption). Periodically a node candidates to be coordinator, if there is no coordinator the candidate becomes the coordinator. There is the need to know the position of the nodes, to know this nodes can use GPS receivers, but it consumes a lot of power. The idea is that instead of having in each node a GPS receiver, use a bigger node with a GPS receiver. Other nodes can calculate relative position using radio frequencies.
+
+
+
+
+\end{document}

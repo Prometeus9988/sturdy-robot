@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  8 FEB 2022 11:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.11.19)  8 FEB 2022 14:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -162,7 +162,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip49
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 10.
+Package hyperref Info: Option `colorlinks' set `true' on input line 9.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
@@ -172,24 +172,24 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 (./homework4.aux)
 \openout1 = `homework4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
@@ -216,7 +216,7 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 \makeMPintoPDFobject=\count269
 \everyMPtoPDFconversion=\toks17
 )))
-Package hyperref Info: Link coloring ON on input line 18.
+Package hyperref Info: Link coloring ON on input line 17.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -229,17 +229,17 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count270
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 17.
+LaTeX Info: Redefining \pageref on input line 17.
+LaTeX Info: Redefining \nameref on input line 17.
  (./homework4.out) (./homework4.out)
 \@outlinefile=\write3
 \openout3 = `homework4.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 21.
+(Font)              <14.4> on input line 20.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 21.
+(Font)              <7> on input line 20.
  (./homework4.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 4.
@@ -254,129 +254,129 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (7.88615pt too wide) in paragraph at lines 38--40
+Overfull \hbox (7.88615pt too wide) in paragraph at lines 37--39
 []\OT1/cmr/m/n/12 Utilizzando un break-point sull'accesso in memo-ria all'indir
 izzo 0x0040EA13
  []
 
 [2] [3] [4]
-Overfull \hbox (1.11484pt too wide) in paragraph at lines 68--69
+Overfull \hbox (1.11484pt too wide) in paragraph at lines 67--68
 \OT1/cmr/m/n/12 (FUN[]00401018) che scrive su FS:[0], questa fun-zione viene ch
 ia-mata all'inizio
  []
 
 
-Overfull \hbox (4.36536pt too wide) in paragraph at lines 70--71
+Overfull \hbox (4.36536pt too wide) in paragraph at lines 69--70
 []\OT1/cmr/m/n/12 Successivamente si nota la pre-senza della chia-mata a SetEr-
 ror-Mode, questo
  []
 
 [5]
-Overfull \hbox (0.13568pt too wide) in paragraph at lines 76--77
+Overfull \hbox (0.13568pt too wide) in paragraph at lines 75--76
 \OT1/cmr/m/n/12 Successivamente nel main viene chia-mata la fun-zione FUN[]0042
 CF00 , questa
  []
 
 [6] [7] [8]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-04.
+03.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
 
-Overfull \hbox (0.15706pt too wide) in paragraph at lines 104--105
+Overfull \hbox (0.15706pt too wide) in paragraph at lines 103--104
 \OT1/cmr/m/n/12 All'interno di questa fun-zione verr^^Ra gen-er-ato l'hash che 
 iden-ti-fica la macchina,
  []
 
 
-Overfull \hbox (2.60014pt too wide) in paragraph at lines 104--105
+Overfull \hbox (2.60014pt too wide) in paragraph at lines 103--104
 \OT1/cmr/m/n/12 zione GetVol-u-me-Name-For-Vol-umeM-o-unt-PointA. Una volta pre
 l-e-vato il GUID,
  []
 
 
-Overfull \hbox (44.59727pt too wide) in paragraph at lines 104--105
+Overfull \hbox (44.59727pt too wide) in paragraph at lines 103--104
 \OT1/cmr/m/n/12 si pre-parer^^Ra una CSP (cryp-to-graphic ser-vice provider), c
 on tipolo-gia PROV[]RSA[]AES
  []
 
 
-Overfull \hbox (16.45929pt too wide) in paragraph at lines 112--114
+Overfull \hbox (16.45929pt too wide) in paragraph at lines 111--113
 \OT1/cmr/m/n/12 stringa of-fus-cata "YB-N-DRFG8EJKMCPQX0T1UWISZA345H769". Es-eg
 uendo
  []
 
 [9] [10]
-Overfull \hbox (51.97368pt too wide) in paragraph at lines 134--137
+Overfull \hbox (51.97368pt too wide) in paragraph at lines 133--136
 \OT1/cmr/m/n/12 AES-ENC trovata suc-ces-si-va-mente. Si no-tano all'interno del
 la fun-zione FUN[]00436CB0,
  []
 
 
-Overfull \hbox (6.88477pt too wide) in paragraph at lines 134--137
+Overfull \hbox (6.88477pt too wide) in paragraph at lines 133--136
 \OT1/cmr/m/n/12 c.msn.com, c.bing.com e as-sets.msn.com, tut-tavia potreb-bero 
 es-sere dei tracker
  []
 
 [11]
-Overfull \hbox (4.98756pt too wide) in paragraph at lines 141--143
+Overfull \hbox (4.98756pt too wide) in paragraph at lines 140--142
 []\OT1/cmr/m/n/12 Uno dei parametri visti in prece-denza ^^Re il parametro "act
 ", questo potrebbe
  []
 
 [12]
-Overfull \hbox (0.7296pt too wide) in paragraph at lines 156--157
+Overfull \hbox (0.7296pt too wide) in paragraph at lines 155--156
 \OT1/cmr/m/n/12 SYSTEM[]HANDLE[]INFORMATIONS. Questa strut-tura tut-tavia non ^
 ^Re doc-
  []
 
 [13]
-Overfull \hbox (1.85843pt too wide) in paragraph at lines 168--169
+Overfull \hbox (1.85843pt too wide) in paragraph at lines 167--168
 \OT1/cmr/m/n/12 fatto poich^^Se las-ciare han-dle aperte da al-tri pro-cessi po
 trebbe portare a qualche
  []
 
 
-Overfull \hbox (61.94342pt too wide) in paragraph at lines 174--175
+Overfull \hbox (61.94342pt too wide) in paragraph at lines 173--174
 \OT1/cmr/m/n/12 razione), se si su-pera il con-trollo verr^^Ra im-postata la mo
 dalit^^Ra THREAD[]BACKGROUND.
  []
 
 [14]
-Overfull \hbox (46.18744pt too wide) in paragraph at lines 179--180
+Overfull \hbox (46.18744pt too wide) in paragraph at lines 178--179
 \OT1/cmr/m/n/12 All'interno di questo ci-clo si es-eguiranno le fun-zioni FUN[]
 0043C160 e FUN[]0043EAD0.
  []
 
 
-Overfull \hbox (50.95322pt too wide) in paragraph at lines 186--187
+Overfull \hbox (50.95322pt too wide) in paragraph at lines 185--186
  []\OT1/cmr/bx/n/12 Funzione di crip-tazione[] \OT1/cmr/m/n/12 Dopo la ricerca 
 dei file viene chia-mata FUN[]00427AC0,
  []
 
 [15] [16] [17]
-Overfull \hbox (83.7829pt too wide) in paragraph at lines 213--214
+Overfull \hbox (83.7829pt too wide) in paragraph at lines 212--213
 \OT1/cmr/m/n/12 vedere sulla doc-u-men-tazione si nota che questa ^^Re una sot-
 tochi-ave di HKEY[]CURRENT[]USER
  []
 
 
-Overfull \hbox (11.64584pt too wide) in paragraph at lines 217--218
+Overfull \hbox (11.64584pt too wide) in paragraph at lines 216--217
 []\OT1/cmr/m/n/12 Continuando l'analisi si nota an-che la pre-senza di una chia
 -mata a RegDelete-
  []
 
 
-Overfull \hbox (5.88007pt too wide) in paragraph at lines 222--223
+Overfull \hbox (5.88007pt too wide) in paragraph at lines 221--222
 \OT1/cmr/m/n/12 L'ultima fun-zione im-por-tante anal-iz-zata nel main ^^Re la f
 un-zione FUN[]00425870,
  []
 
 [18]
-Overfull \hbox (7.33794pt too wide) in paragraph at lines 224--225
+Overfull \hbox (7.33794pt too wide) in paragraph at lines 223--224
 \OT1/cmr/m/n/12 mod-i-fi-care le chi-avi di reg-istro con-tenute in HKEY[]CURRE
 NT[]USER\OMS/cmsy/m/n/12 n\OT1/cmr/m/n/12 Control
  []
@@ -388,7 +388,7 @@ Package rerunfilecheck Info: File `homework4.out' has not changed.
 Here is how much of TeX's memory you used:
  7591 strings out of 478994
  112795 string characters out of 5858183
- 412158 words of memory out of 5000000
+ 412155 words of memory out of 5000000
  24961 multiletter control sequences out of 15000+600000
  409104 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -400,7 +400,7 @@ usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on homework4.pdf (20 pages, 120831 bytes).
+Output written on homework4.pdf (20 pages, 120740 bytes).
 PDF statistics:
  264 PDF objects out of 1000 (max. 8388607)
  233 compressed objects within 3 object streams
